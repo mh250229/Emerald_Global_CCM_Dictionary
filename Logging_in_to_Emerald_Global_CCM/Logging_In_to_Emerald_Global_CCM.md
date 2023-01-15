@@ -9,9 +9,3 @@ Access the Emerald Global CCM and in the Log in screen, enter the user name and 
 The Home page is displayed:
 
  ![Home Page Screen](/Images/HomePageScreen.png)
-
-
-
-|**Field**|**Description**|
-|---------|----------|
-|**Location**|The store the EOD scheduling is defined for.|
