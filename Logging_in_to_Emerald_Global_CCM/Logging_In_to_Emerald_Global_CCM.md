@@ -1,4 +1,4 @@
-# Logging in to Emerald Global CCM
+## Logging in to Emerald Global CCM
 
 Access the Emerald Global CCM and in the Log in screen, enter the user name and password and click LOG IN.
 
