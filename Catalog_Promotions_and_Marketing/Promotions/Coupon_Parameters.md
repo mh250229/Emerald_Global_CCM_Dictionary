@@ -34,7 +34,3 @@ Different parameters values can be configured in different Business Units.
 |**Manual Coupons area**||
 |Manual Coupon Tender|The tender used to report the coupon reward when the coupon amount is manually entered by the cashier.<BR>For example, when a coupon barcode cannot be scanned, or cannot be entered. The cashier selects the Manual Coupon function, and the selected tender is displayed in Tender mode. The cashier then manually enters the coupon reward so that the customer can receive the reward.|
 |Coupon Barcode Required|Indicates that the coupon barcode must be entered by the cashier after the coupon is scanned.|
-
-
-
-
