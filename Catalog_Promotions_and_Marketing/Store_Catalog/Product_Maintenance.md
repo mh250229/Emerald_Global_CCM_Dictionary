@@ -72,3 +72,31 @@ Inherited store ranges for a specific product can only be modified for future ef
 
 **Note:** Only users assigned to Roles with the relevant permissions can assign store ranges.
 
+![Store Range Tab](/Images/StoreRangeTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Locations**|The store hierarchy from which you can select a business unit and view the products linked to the selected store.|
+|**Store Range**||
+|Location|The business selected in the Store Hierarchy in the Locations section.<BR>**Note:** A location can be deleted only if the Effective Date is in the future.|
+|Effective Date|The date from which the product can be sold in the selected business unit. The Effective Date is based on the store time.|
+|Include/Exclude|Indicates if the selected item can be sold in the selected location. If No, then the item cannot be sold in the selected location and is not displayed in the menus.<BR>If an item modifier is excluded from the store, it is not displayed in the item modifier options in the group linked to the main item.<BR>For example, on ordering a sandwich on the Kiosk or QSR touchpoints, the option to add sauce is available. If the ketchup is not in the store variety, the sauce options will not include ketchup. If ketchup is the only sauce option, then no sauce options are displayed.<BR>If an item modifier excluded from the store, and the main item cannot be sold without the modifier. the main item is marked as not for sale.<BR>For example, Tomato is not in the store variety and is a mandatory ingredient of the BLT sandwich. The BLT sandwich is marked as not for sale, and is not displayed in the menu options at the Kiosk or QSR touchpoints.|
+
+### Price Tab
+
+The **Price tab** is used to define prices for a selected item in a specific business unit, or at the HQ level. Only users assigned to Roles with the relevant permissions can define prices.
+
+![Price Tab](/Images/PriceTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Locations**|The store hierarchy from which you can select a business unit and view the products linked to the selected store. Once a level is selected, the item price defined for the product at the selected level is displayed.<BR>Prices applied at the Root level are applied to all the Business Units/Stores.<BR>**Note:** Only stores to which the user has access permission are displayed.|
+|**Prices**|The prices that apply to the selected product.|
+|Location|The location where the price applies. If an inherited price exists for the select product, you must localize it to be able to assign the new price locally. Users can delete a price. If a local price is deleted, and an inherited price exists, it is automatically applied.<BR>The location and hierarchy (selected in the Locations panel) are the same. The user must first select the Business Unit from the tree, which creates a Price Entry that can be modified. The Price Entry has the Location as an attribute.|
+|Unit of Measure|The unit by which the item is sold, for example, Kg. Only one UOM can be defined for the product in each Business Unit.|
+|Pricing qty|The number of units included in the price. For example, three packets of Candy are sold for $9.00. In this example, the Pricing Quantity is 3.<BR>The pricing quantity must be a whole number greater than 0 and cannot be a decimal. If a value is not entered, then the product price is for one unit of the selected Unit of Measure.|
+|Price|The retail item price defined for the selected Business Unit. Prices can be deleted but products without a price cannot be sold at a touchpoint.|
+|Currency|The currency in which the item price is defined.|
+|Last Updated – Date/Time|The date and time that the price was last updated.|
+|Start Date/Time|The date and time from which the price is applied. Only future start dates can be modified. Start dates with past or current dates cannot be modified.|
+|End Date/Time|The date and time up to which the price is applied. The End Date can be modified for prices with start date in the past or present.|
