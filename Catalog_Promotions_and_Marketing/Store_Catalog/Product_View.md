@@ -1,8 +1,4 @@
-# Catalog, Promotions & Marketing
-
-## Store Catalog
-
-### Product View
+## Product View
 
 **Product View** is used to search for items, and view item details, such as the price, additional codes, etc. You can search for item in a specific store or item hierarchy.
 
@@ -17,7 +13,7 @@
 |**Exact Match**|Indicates that only items with the exact item code entered in the Code field are included in the search results. If not selected, all items with the combination of the specified item code are retrieved.<BR>For example, if you enter 123 in the Item Code field, and select Exact Match, only item #123 is displayed in the grid. If you do not select Exact Match, any item with the combination of 123 in the Item number is retrieved, e.g., 123456, 484123, 512346.|
 |**Item Description**|The item description.|
 |**Merchandise Hierarchy**|The item hierarchy.|
-|**Weak Search Criteria**| Indicates that the search results are limited to the first 300 items that meet the Search criteria, and that additional search criteria should be added to narrow down the results.| 
+|**Weak Search Criteria**| Indicates that the search results are limited to the first 300 items that meet the Search criteria, and that additional search criteria should be added to narrow down the results.|
 |**Items**||
 |Status|The item status. The options are:<BR>![Green Check Mark Icon](/Images/GreenCheckMarkIcon.png) indicates the item can be sold in the selected store.<BR>![None Icon](/Images/NoneIcon.png) indicates that the item is not included in the store variety for the selected store.<BR>![Lock Icon](/Images/lockicon.png) indicates that the item is locked for sale in the selected store.|
 |Code|The item code number.|
@@ -55,5 +51,4 @@
 |Unit of Measurement|The UOM used to calculate the item calories. Each item can have only one UOM. UOMs can be per weight, e.g., gr, kg, lb, or each. Each refers to the relevant serving size, e.g., slice, cup, spoon.|
 |Quantity|The quantity of the item which reflects the calculated calories value.|
 |Basic Calories Value|The number of calories, per the quantity and the UOM.|
-|Current Display|The calorie value according to Display Type option selected in Product Maintenance.<BR>The Display Type options are:<BR>* **Single** – If selected, the Current Display field displays the Basic Calories Value for the item, e.g., 520. This is the default.<BR>* **Two** – If selected, the Current Display field displays the minimum and maximum number of calories calculated for the item, e.g., 420/700.<BR>* **Range** – If selected, the Current Display field displays the calorie range for the item, e.g., 420 – 700.<BR>**Note:** Modifiers are always presented in the Single Value format.|
-|
+|Current Display|The calorie value according to Display Type option selected in Product Maintenance.<BR>The Display Type options are:<BR>**Single** – If selected, the Current Display field displays the Basic Calories Value for the item, e.g., 520. This is the default.<BR>**Two** – If selected, the Current Display field displays the minimum and maximum number of calories calculated for the item, e.g., 420/700.<BR>**Range** – If selected, the Current Display field displays the calorie range for the item, e.g., 420 – 700.<BR>**Note:** Modifiers are always presented in the Single Value format.|

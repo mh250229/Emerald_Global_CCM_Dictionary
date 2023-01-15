@@ -1,4 +1,4 @@
-### Product Maintenance
+## Product Maintenance
 
 **Product Maintenance** is used to add a product to the Store Catalog or modify the product details at the HQ level.
 
@@ -12,11 +12,11 @@ In addition, you can define restrictions, prices and the stores in which the pro
 |---------|----------|
 |**Item Code**|The ID of the product you want to view.|
 
-#### General Tab
+### General Tab
 
 The General tab displays and modifies product details, such as the item description and sellable codes. The product details are updated in the catalog at HQ level.
 
-**Note:** Only users assigned to Roles with the relevant permissions can update product details. 
+**Note:** Only users assigned to Roles with the relevant permissions can update product details.
 
 ![General Tab](/Images/GeneralTab.png)
 
@@ -36,7 +36,7 @@ The General tab displays and modifies product details, such as the item descript
 |Min Calories Value (if any)|The minimum number of calories is the sum of all the required item modifiers set to their Min portion.|
 |Max Calories Value (if any)|The maximum number of calories is the sum of all the item modifiers set to the Max portion.|
 
-#### Restrictions Tab
+### Restrictions Tab
 
 The **Restrictions tab** is used to apply restrictions on selected products.
 
@@ -60,7 +60,7 @@ Once a restriction is deleted at all levels, the product is no longer restricted
 |Reason|The reasons displayed at the POS when a product with a Locked For Sale  restriction is scanned. On scanning the product a list of the selected reasons is displayed and the cashier then selects the relevant reason.<BR>Reason Codes are required only for Locked For Sale restrictions. The field is not enabled when another restriction is selected.
 |Enabled|Indicates that the restriction is applied to the specified location.|
 
-#### Store Range Tab
+### Store Range Tab
 
 The Store Range tab is used to view the store in which the product is sold. You can define a single store or a range of stores.
 
@@ -71,3 +71,4 @@ A Store Range can only be deleted if the product is linked to the actual busines
 Inherited store ranges for a specific product can only be modified for future effective dates.
 
 **Note:** Only users assigned to Roles with the relevant permissions can assign store ranges.
+
