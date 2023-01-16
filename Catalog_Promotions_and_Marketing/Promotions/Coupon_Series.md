@@ -116,3 +116,33 @@ The **Attributes tab** defines general coupon series attributes and link promoti
 |**Linked Promotions section**|The promotions linked to a coupon series. Each promotion can be opened in a separate office tab, viewed and edited.|
 |Description|The name of the promotion linked to the coupon instance.|
 |Linkage type|The context of the coupon’s link to the promotion, i.e., as an issuing or redemption promotion.|
+
+### Coupon Instances Tab
+
+The **Coupon instances** tag defines the subsets of a coupon series. Some properties can be overridden by the coupon instance properties (examples: printing message, tender ID in case of a fallback scenario etc.).
+
+You can also block an instance within the coupon series.
+
+![Coupon Instances Tab](/Images/CouponInstancesTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Name**|The name of the coupon instance series.<br>**Note:** The list of coupon instances can be filtered by Name and Offer Code.|
+|**Offer code**|The logical link between the issuing and redemption promotions linked to the coupon. The Offer Code is embedded in the coupon barcode, and when the coupon is scanned, facilitates identifying the triggering promotion.|
+|**Override**|Indicates if the coupon reward for the defined coupon instance can be overridden. If Yes, the cashier can select the coupon line in the transaction and override the value.|
+|**Attributes section**||
+|Printing Template|The template linked to the coupon instance. This field is integrated with the Message module, and the user can access the Message module to create a new message. If no special template is selected, the Printing Template linked to the coupon series in the Attributes tab is used.|
+|Tender Type|The tender that is logged when the defined coupon is redeemed.<br>Note: Coupons that trigger promotions configured as Reward As Tender have their tender defined from the promotion and not the coupon settings. If the Promotion is not found the system retrieves the Tender from the Coupon Settings.|
+|Member Card Required|A loyalty card must be scanned or entered during the transaction to accept a scanned coupon (a message is prompted if it has not).<br>This option is only enabled if the checkbox is selected.|
+|Blocked|The coupon instance within the coupon series is not valid. When a blocked coupon is scanned at the POS, a message is prompted that the coupon is no longer valid.<br>This option is only enabled if the checkbox is selected.|
+|Virtual Coupon|The coupon instance within the coupon series is a virtual coupon. Electronic or virtual coupons are added to loyalty member accounts via a website. The coupons are automatically redeemed during a sales transaction in which the customer meets the condition required to trigger the coupon.<br> Note: If the Coupon Series is virtual, then the coupon instance is also a virtual coupon even if this field is set to No.<br>This option is only enabled if the checkbox is selected.|
+|**Linked Promotions section**|Defines the promotions linked to the coupon instance. Each promotion can be opened in a separate office tab, viewed and edited.|
+|Description|The name of the promotion linked to the coupon instance.|
+|Linkage type|Redemption promotion or Issuing promotion.|
+|**Coupons section**||
+|Barcode|The full barcode coupon which is linked to each coupon instance.|
+|Reward Value|The coupon reward value.<br>Upon triggering a redemption promotion, the coupon reward will be given according to the following logic:<br>If there is a reward value linked to the coupon (barcode level), this reward value will be given.<br>If there is no reward value linked to the coupon, the reward value which is embedded inside the barcode will be retrieved.<br>If this is an embedded reward = coupon series prompts reward value, the reward will be retrieved from the cashier’s entry.<br>If no reward is embedded in the coupon (i.e. the coupon is a ‘trigger coupon’), the reward will be taken from the promotion.|
+|Start Date|The date from which the coupon is valid.|
+|End Date|The date from which the coupon expires.|
+|Blocked|The coupon is blocked if either the coupon full barcode/coupon instance OR coupon series is defined as 'Blocked'.<br>When scanned at the POS, a blocked coupon is rejected.|
+|Status|Indicates if the coupon has been redeemed. The options are:<br>**Active** - the coupon has not been redeemed.<br>**Redeemed** - the coupon has been redeemed and is no longer active in the system. The coupon is blocked and rejected.|
