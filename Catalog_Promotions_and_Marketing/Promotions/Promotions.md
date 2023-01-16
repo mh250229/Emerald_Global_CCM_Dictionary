@@ -49,8 +49,7 @@ Apportionment can also be defined according to the user’s requirements.
 |---------|----------|
 |ID|The unique promotion ID number. The promotion ID number is assigned when a promotion is created by one of the following methods:<br><br>Imported from an external system.<br>Configured manually and the ID is assigned by the user.<br>Configured manually and the ID is generated automatically. If the server receives a promotion without an ID, a default ID is generated.<br><br>The ID, Description, and Start fields are mandatory.|
 |Short Description|The promotion description displayed at the touchpoint. If a long description is not defined, the short description is printed on the receipt.|
-|Long Description|The promotion description printed on the receipt. 
-The Long Description is not mandatory. If the Long Description is not defined, the Short Description is used instead.|
+|Long Description|The promotion description printed on the receipt.<br>The Long Description is not mandatory. If the Long Description is not defined, the Short Description is used instead.|
 |Start|The date and time on which the promotion starts. You can assign the same promotion to different stores in different periods of time.|
 |End|The date and time on which the promotion ends. The End date is not mandatory. If an End date is not defined, the promotion runs indefinitely.|
 |Suspended|The promotion is not running in the stores. If set to Yes, the promotion is stopped from running in the store, even if the start and end dates are active.<br>This option is used to temporarily suspend a promotion from running during a specific period of its life cycle.|
@@ -106,4 +105,17 @@ The **Criteria** option defines the conditions and the trigger values which spec
 |**Coupon**|The coupon barcode required to trigger a promotion.<br>![Coupon](/Images/Coupon.png)|
 |Condition Required Once Per Ticket|Indicates that a single scan of the coupon triggers multiple promotion redemptions. IF not selected, a single coupon triggers a single redemption.|
 |Coupon Type|The promotion is triggered by a specific barcode or by a coupon which is linked to a selected coupon series/coupon instance.  The options are:<br><br>**Full Barcode** - The full coupon barcode is linked as a condition to trigger the promotion. If the same barcode coupon was scanned at the POS and passed all the validations, the promotion is triggered (if all other conditions are met).<br>**Series\Instance Selection** - The coupon series or instance is linked as a condition to trigger the promotion.|
-|
+|**Store**|The stores in which a promotion is running.<BR>![Coupon](/Images/Stores.png)|
+|Eligible stores|The stores you want to link to the promotion.<BR>The options are:<BR>**All Stores** - indicates that the promotion is triggered in all the stores. When selected, the Stores section header is displayed as follows:<br>**All Stores excluding the selected stores** - indicates that the promotion is triggered in all the stores except for a specific store. When selected, the Stores section header is displayed as follows: , and the following fields are displayed:<br>**Store Selection** - indicates that the promotion is triggered in the selected stores. This option is dynamic, allowing you to select the store and specify if the promotion is excluded from the selected store. When selected, the Stores section header is displayed as follows<br>**No Stores** - indicates that the promotion is not triggered in any of the stores.|
+|**Touch Point Groups**|The touchpoint groups on which the promotion is triggered.<BR>![Touchpoint Groups](/Images/TouchpointGroups.png)|
+|Eligible Touchpoint Groups|The Touchpoint Groups linked to the promotion. The options are:<BR>**All Touchpoint Groups** – All the Touchpoint Groups are linked to a promotion.<BR>**Touchpoint Groups Selection** – The selected Touchpoint Groups linked to a promotion.  When selected, the option to select the Touchpoint Groups id displayed.|
+|**Scheduling & Timing**|The week days and times that promotions are scheduled to run.<BR>![Scheduling & Timing](/Images/SchedulingAndTiming.png)|
+|Trigger Promotion by Item Sale Time|Specifies if the promotion is triggered according to the time the transaction started or the time the item was added to the promotion.|
+|Week Day|The day of the week on which the promotion is active.|
+|Start Hour|The time the promotion begins on the selected day.|
+|End Hour|The time the promotion ends on the selected day.|
+|Active|Indicates if the promotion is active or not.|
+
+### Reward
+
+The Reward option defines the reward types issued when the promotion is triggered.
