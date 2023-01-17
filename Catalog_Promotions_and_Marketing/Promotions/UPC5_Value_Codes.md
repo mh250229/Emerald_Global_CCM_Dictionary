@@ -17,3 +17,17 @@ For example: Value Code 05 represents $1.40 Off, Value Code 07 represents Buy 3 
 
 |**Field**|**Description**|
 |---------|----------|
+|**Code**|The two-digit value code that identifies the value of the coupon.
+|**Face Value**|The reward type issued for each value code, e.g., Free Merchandise, Buy X - Get Y Free<BR>**Get Value** - The reward amount or value received when the coupon is redeemed. For example, Value Code 41 represents Buy 3 or more get $0.50 off. In this example, the Get Value is $0.50.<BR>**Buy Quantity** - The amount or value that triggers the promotion linked to the coupon. For example, Value Code 41 represents Buy 3 or more get $0.50 off. In this example, the Buy Value is 3.|
+|**Value**||
+
+**Reference Path:** *Sales/General/UPC5 Value Codes*
+
+![UPC5 Value Code Form](/Images/UPC5ValueCodeForm.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Value Code**|The two-digit value code that identifies the value of the coupon.|
+|**Face Value**|The reward type issued for each value code, e.g., Free Merchandise, Buy X - Get Y Free|
+|**Get Value**|The reward amount or value received when the coupon is redeemed. For example, Value Code 41 represents Buy 3 or more get $0.50 off. In this example, the Get Value is $0.50.-|
+|**Buy Quantity**|The amount or value that triggers the promotion linked to the coupon. For example, Value Code 41 represents Buy 3 or more get $0.50 off. In this example, the Buy Value is 3.|
