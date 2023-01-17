@@ -11,8 +11,7 @@ On selecting the Forgot Password link on a touchpoint, an email containing the c
 |---------|----------|
 |**SMTP server**|The name of the server used to send the email.|
 |**From**|The name of the server from which the email is sent.|
-|**Email message**|The message sent in the email to reset or verify a password. 
-The message sent in the email contains dynamic attributes which include the customer's first and last name, as well as an identification token to reset their password.|
+|**Email message**|The message sent in the email to reset or verify a password.<br>The message sent in the email contains dynamic attributes which include the customer's first and last name, as well as an identification token to reset their password.|
 |**Forgot Password Message**|The message sent in the email sent to customers to reset a forgotten password.|
 |**SMTP server login User name**|The user name used to log in to the server that sends the email.|
 |**SMTP server login Password**|The password used to log in to the server that sends the email.|
