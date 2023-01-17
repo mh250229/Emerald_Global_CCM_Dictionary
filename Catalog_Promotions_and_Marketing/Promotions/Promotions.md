@@ -193,7 +193,7 @@ The Reward option defines the reward types issued when the promotion is triggere
 |**Triggering Timing**|Specifies when a promotion is triggered once the promotion criteria are met in a transaction.|
 |Set Promotion to trigger on|Specifies when the promotion is triggered in a transaction. The options are:<BR>**Meeting Criteria**- indicates that the promotion is triggered immediately after the promotion criteria are met. This is the default value.<BR>**Total Ticket** - indicates that the promotion is triggered once the cashier selects the Total function to complete the transaction.|
 |**Reward Item**|Specifies the item issued as a reward in the promotion.|
-|Reward Item|The item automatically added to a transaction as a reward. To select an item, click ![Browse](/Images/Browse.png) .  See also: Browse or Look Up Item Screen.|
+|Reward Item|The item automatically added to a transaction as a reward. To select an item, click ![Three dots icon](/Images/ThreeDotsIcon.png) .  See also: Browse or Look Up Item Screen.|
 
 ### Funding
 
