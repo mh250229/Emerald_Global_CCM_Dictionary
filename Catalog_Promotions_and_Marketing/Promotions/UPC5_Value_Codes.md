@@ -13,3 +13,7 @@ For example: Value Code 05 represents $1.40 Off, Value Code 07 represents Buy 3 
 
 **Reference Path:** *Catalog, Promotions & Marketing/Promotions/UPC5 Value Codes*
 
+![UPC5 Value Code Screen](/Images/UPC5ValueCodeScreen.png)
+
+|**Field**|**Description**|
+|---------|----------|
