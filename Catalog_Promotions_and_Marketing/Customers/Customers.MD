@@ -139,3 +139,76 @@ Loyalty customers can also share loyalty benefits such as account points and dig
 The **Promotions tab** displays the promotions and coupons the customer and/or any member of the household are registered to.
 
 **Reference Path:** *Catalog, Promotions & Marketing/Customers/Customers/Add New*
+
+![Promotions Tab](/Images/PromotionsTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Registered Promotions**|Displays a list of the promotions registered to the customer. When a transaction is started at the POS, and the customer is registered either as a Loyalty customer or a mobile shopper, the system identifies the customer and the promotions registered to the customer are available.<br>Currently, a promotion can be redeemed only once. Once the promotion is triggered, it is disconnected from the customer, and removed from the list of registered promotions.|
+|Promotion ID|The ID of the promotion registered to the customer.|
+|Promotion name|The name of the promotion.|
+|Registration Date|The date the customer registered to the promotion.|
+|Expiration Date|The date on which the registration to the promotion expires.|
+|Status|The promotion status. The options are:<BR>**Registered** - The customer registered to the promotion.<BR>**Burned** – The customer was registered to the promotion and has received the promotion reward.<BR>**Expired** - The customer registered to the promotion, however, the promotion or the registration period expired before the customer received the promotion reward.<BR>**Unregistered** - The customer registered to the promotion and then cancelled their registration.|
+|**Coupons**|Displays the coupons registered to the customer or to one of the household members. Active coupons are displayed first and then redeemed coupons. The coupons are sorted by End Date in ascending order (active coupons are displayed first).|
+|Coupon Barcode|The barcode of the coupon.|
+|Reward value|The coupon reward value.|
+|Start Date|The date from which the coupon can be redeemed.|
+|Expiration Date|The date from which the coupon expires.|
+|Redeemed|The customer redeemed the coupon and received the coupon reward.|
+|Redemption Date|The date on which the customer redeemed the coupon.|
+
+### Visits Tab
+
+The Visits tab displays the number of times a customer or a member of the same household visited the stores. You can view a list of the customer's transactions as well as the store the customer prefers to shop in, the total amount spent by the customer and the customer's card number
+
+**Reference Path:** *Catalog, Promotions & Marketing/Customers/Customers/Add New*
+
+![VIsits Tab](/Images/VisitsTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Training mode tickets**|Indicates that the Show Results displays only tickets performed in Training mode when viewing Customer Visits information.|
+|**Visits**|Displays a list of the customer's transactions made when the customer visited the store and purchased items.|
+|Purchase Date|The date and time of the purchase.|
+|Store Name|The store in which the customer purchased the items.|
+|POS Code|The ID of the POS touchpoint on which the transaction was performed.|
+|Total Ticket Spend|The total amount spent in the transaction.|
+|Card Number|The number of the customer's card used to pay for the transaction.|
+|**Stores**|Displays a list of stores the customer frequently shops in. Stores are added to a customer's list of local stores based on their shopping history. For example, if a customer visits the same store in the last x months, the store is added to their list.<BR>The Customer Data Management (CDM) adds/removes the local stores to and from a customer's stores list. Currently, this logic is external, and is not calculated by the CDM. The CDM only updates the stores list in the Customer Management screen on request.|
+|Store|The ID of the customer’s local store.|
+|Store Name|The Store name.|
+|Business Unit|The business unit to which the store is linked.|
+|City|The city in which the store is located.|
+|Card Number|The number of the customer card used to pay for the transaction.|
+|Phone (home or mobile)|The store's phone number.|
+
+### Self-Scan Tab
+
+The Self Scan tab displays customer rescan information. You can view the details of customers’ self scan transactions as well as the number of transactions rescanned.
+
+Customers have the option to take a Self-Scan device, and scan each item before placing it in the shopping cart. The Self Scan comes with security features to protect the retailer. This includes a mechanism to automatically trigger a rescan of the items, or manually trigger a forced rescan of the items. This option enables the retailer to double-check that customers scanned all the items in their shopping cart.
+
+**Reference Path:** *Catalog, Promotions & Marketing/Customers/Customers/Add New*
+
+![Self-Scan Tab](/Images/SelfScanTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Rescan details**||
+|Trust Level|The trust level assigned to the customer determines the frequency that a full or partial rescan is performed. A rescan requires the cashier to rescan the items previously scanned by the customer as a security measure to prevent theft.<BR>When the customer uses their Self Scan card to start a Self Scan transaction, the system validates the assigned trust level.<BR>Trust Levels are configured in the Security Policy and are configurable.<BR>The probability of a rescan being performed increases with lower Trust Level. For example, rescans are not performed for customers with Trust Level 5, however a customer assigned Trust Level 1 will always be rescanned.|
+|Force rescan on next trip|A rescan is enforced next time a customer performs a Self Scan transaction. Can be used if the customer service desk suspects inappropriate shopping behavior. The options are:<BR>**Full** - All the items in the transaction are rescanned by the cashier.<BR>**Partial** - A defined number of items in the transaction are rescanned by the cashier. The number of items rescanned is defined in the system parameters.<BR>**None** - No rescan is performed.|
+|Suspended User|The user is suspended due to fraudulent use.<BR>Prevents fraudulent customers, known to the retailer, from using the Self Scan service. When a suspended customer scans/swipes their loyalty card on the Entry Unit, a message informing the customer to approach the customer service desk for further assistance is displayed on the Entry Unit.<BR>The shopper status can be changed at any time from suspended to not suspended. A ‘Status change reason’ is provided  to track a shopper’s history.|
+|Suspended Reason|The reason the customer was suspended. The suspended reason can be updated.|
+|**Last Transactions summary**|
+|No. of self scan transactions since last rescan|The number of the self scan transactions performed by the customer since the last full or partial rescan was performed on the customer's scanned items.|
+|Total no. of self scan transactions|The total number of the customer’s self scan transactions.|
+|**Last self scan transaction:**||
+|Amount|The amount of the last self scan transaction performed by the customer.|
+|Date|The date of the last self scan transaction performed by the customer.|
+|**Last full rescan:**||
+|Date|The date the last full rescan was performed on the customer's self scan transactions.|
+|Succeeded|Indicates if the rescan was successful and there were no discrepancies between the self scan transaction and the rescan transaction.|
+|**Last partial rescan:**||
+|Date|The date the last partial rescan performed on the customer's self scan transactions.|
+|Succeeded|Indicates that the rescan was successful, and there are no discrepancies between the self scan transaction and the rescan transaction|
