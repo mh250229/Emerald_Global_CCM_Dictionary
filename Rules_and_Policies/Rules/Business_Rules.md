@@ -164,8 +164,23 @@ The user is not obligated to define all the conditions. It depends on the busine
 |**Batch Order Condition**|Applies a rule to a specific QR Code.<BR>For example, a rule is defined to specify that specific items in a QR Code cannot be voided.<BR>![Batch Order Condition](/Images/BatchOrderCondition.png)|Price Override<BR>Void Item<BR>Void Transaction|
 |Batch Order Type|Currently only QR Code is supported.||
 |Batch Order Label|The label used to differentiate between batches of the same type, for example pharma and Deli.||
-|**Batch Combination**|Applies a rule to define which batch label combination will trigger the BRM. You can use it to prevent specific QR Codes from being sold in the same transaction. 
+|**Batch Combination**|Applies a rule to define which batch label combination will trigger the BRM. You can use it to prevent specific QR Codes from being sold in the same transaction.<BR>![Batch Combination Condition](/Images/BatchCombinationCondition.png)<BR>The options are:<BR>**Batch Order Type** – includes all the batch order types, currently QR Code.<BR>**Batch Order Label** – a free text field to enter which Batch orders combination will trigger the  action of the BRM defined. This field is only enabled once the Batch Order Type field is selected.<BR>**For example:**<BR>If the following BRM is defined:<BR>BRM Type – Batch Order<BR>Batch Order Type – QR Code<BR>Batch Order Label - PH<BR>Batch Combination Condition:<BR>Batch Order Type: QR Code<BR>Batch Order Label – FO.<BR>Action – Prohibit (Message: Action Prohibited).<BR><BR>If the cashier scans the QR Code of type PH, and then scans another QR Code of type FO. The BRM is triggered and the POS prompts: Action Prohibited.|Batch Order|
 
+### Action Tab
 
+The Action Tab defines the action taken when a business rule is triggered. A message is always displayed, and additional user or cashier action may be necessary. 
 
+**Reference Path:** *Rules & Policies/Rules/Business Rules/Add New/ Action Tab*
 
+![Action Tab](/Images/ActionTab.png)
+
+The following Action types are supported:
+* Member Validation
+* Prohibit
+* Approval required
+* Select reason
+* Enter loyalty card
+* Prompt for confirmation
+* Form
+* Input date required
+* Notification
