@@ -175,6 +175,7 @@ The Action Tab defines the action taken when a business rule is triggered. A mes
 ![Action Tab](/Images/ActionTab.png)
 
 The following Action types are supported:
+
 * Member Validation
 * Prohibit
 * Approval required
@@ -184,3 +185,39 @@ The following Action types are supported:
 * Form
 * Input date required
 * Notification
+
+#### Action Types
+
+##### Member Validation
+
+The Member Validation action is used to validate Loyalty members who request to pay or partially pay for their transaction with ‘Points’.
+The Member Validation action type is used for the payment BRM.
+
+![Member Validation](/Images/MemberValidation.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Type**|The selected action type, e.g., Member Validation|
+|**Message**|The message prompting the customer/cashier that the action is prohibited.|
+|**Scope**|Defines how often the business rule can be triggered. The options are:<BR>**Request** - indicates that the business rule is always triggered.<BR>**Transaction** - indicates that the business rule is only triggered once per transaction.|
+|**Input Label**|Defines the text title above the message input fields. For example, if a Date is selected from the Input Type drop-down list, and the cashier is required to enter the date of birth for a customer, the input label may be: Enter the date (DD/MM/YYYY).|
+|**Validate By**|Specifies how the loyalty member validated. The options are:<BR>Date of Birth<BR>4 last digits of ID|
+|**On Self Checkout**|Specifies how the Business Rule/Intervention is handled on the Self Checkout.<BR>The options are:<BR>**Requires attendant** - indicates that an attendant is required to resolve the intervention.<BR>**Triggered as delayed** – indicates if the intervention is handled immediately or is delayed so that the attendant can handle the intervention anytime during the transaction.<BR>If selected, the intervention is delayed and the shopper can continue shopping. Once the shopper finishes scanning their items and selects the Finish & Pay button, and the attendant has not yet handled the intervention, it then becomes an immediate intervention and the required action must be performed by the attendant to clear the intervention .<BR>If not selected, the intervention must be handled immediately. The shopper cannot continue shopping until the intervention is resolved.|
+
+##### Prohibit
+
+The **Prohibit** Action Type restricts certain items, or groups of items from being sold on a specific touchpoint, or prevent specific functions, etc. which are part of a business rule.  
+
+![Prohibit](/Images/Prohibit.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Type**|The selected action type, e.g., Prohibit|
+|**Message**|The message prompting the customer/cashier that the action is prohibited.|
+|**On Self Checkout**|Specifies how the Business Rule/Intervention is handled on the Self Checkout.<BR>The options are:<BR>**Requires attendant** - indicates that an attendant is required to resolve the intervention.<BR>**Triggered as delayed** – indicates if the intervention is handled immediately or is delayed so that the attendant can handle the intervention anytime during the transaction.<BR>If selected, the intervention is delayed and the shopper can continue shopping. Once the shopper finishes scanning their items and selects the Finish & Pay button, and the attendant has not yet handled the intervention, it then becomes an immediate intervention and the required action must be performed by the attendant to clear the intervention.<BR>If not selected, the intervention must be handled immediately. The shopper cannot continue shopping until the intervention is resolved.|
+
+##### Approval Required
+
+The Approval Required Action Type requires the manager to approve the transaction before the cashier can continue.
+
+
