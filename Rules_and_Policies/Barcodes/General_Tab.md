@@ -1,0 +1,67 @@
+## General Tab
+
+The General tab is used to define the data pattern recognizer, and the Check Digit Validation. The Recognizer is usually the prefix and the length of the data pattern, but can also be the regular expression.
+
+Each data pattern is set up with a validation code, identifier, and a set of fields that start in set positions within the numeric data pattern.
+
+It is not possible to save a data pattern which has conflicting prefix, length and type for the same business unit. If the user does define two barcodes with the same prefix and length, a message is prompted to prevent this.
+
+On saving a data pattern with the 'same' recognizer for different types, the data pattern works according to the transaction flow:
+
+In some scenarios the first data pattern identified in the transaction, regardless of the type, is used, e.g., User Barcode.
+
+In other scenarios the system validates each data pattern in the transaction identifying matching results and uses them all, for example in a DataAdd service.
+
+In most scenarios, the system takes the data pattern it needs, such as in selling, self scanning, etc.
+
+**Reference Path:** *Rules & Policies/Barcodes/Data Patterns/Add New*
+
+![Barcodes General Tab](/Images/BarcodesGeneralTab.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|ID|The data pattern’s unique ID number in the system.|
+|Description|The name of each data pattern.|
+|Type|The type of data pattern, e.g., Item, Tender, Customer. The options include:<BR><BR>**Item** - To define the data pattern used to retrieve item selling information<BR>**Tender** - To define the data pattern used to retrieve tender information.<BR>**Customer** – To define the data pattern used to retrieve customer’s identity when a member card is scanned or swipe/manually entered.<BR>**End Of Trip** - To define the data pattern used to retrieve transaction information when scanned by the cashier to retrieve a transaction from the Self Scan.<BR>**Cradle** - To define the data pattern used to identify and release the Self Scan from the cradle rack.<BR>**Detailed Order Code** – To define the data pattern used to support configuration of new QR Codes.<BR>DataBar Item<BR>**Warm Reboot** - To define a data pattern used, which includes information used to reboot a Self Scan device whilst it is still locked in the cradle. A warm reboot operation clears the device's memory.<BR>When the customer lifts a Self Scan device from the cradle, the customer is requested to scan the Warm Reboot barcode, and the device is then rebooted. Once a reboot is completed, the device is fully operational.<BR>This is useful when it is required to handle cases where remote operations are not effective.<BR>**Release Device** - To define a data pattern used to manually release a self scan device from the cradle. While the device is locked in the cradle, the user can slightly lift the device, and return it to the charger.<BR>This operation should trigger the device to scan the cradle barcode, which is located above the device. On scanning the Release Device barcode instead of the Cradle barcode, the device is released from the cradle. After a few seconds, the cradle is locked.<BR>**User Credentials** – To define the data pattern to enable users to sign in by swiping their employee card at the touchpoint and not manually enter their user name and password.<BR>**Coupon** - To define the data pattern used to retrieve Coupon information.<BR>**Transaction** - To define the data pattern used to retrieve Transaction information<BR>**Gift Receipt** - To define the data pattern used to retrieve Gift Receipt information, used to print on the gift receipts when items are purchased, and when customer's return items with the gift receipt.<BR>**Blind Pickup**- To define the data pattern used to retrieve Blind Pick up information. When a Blind Pickup is performed, a slip is generated with the barcode.<BR>**Online Services Profile** - To define the data pattern used to retrieve the details of the vendor to which the EPS must send the authorization during an online item authorization process. This is mandatory when the online purchase item is processed with Emerald Global EPS.<BR>**Group** - To define the data pattern used to retrieve online purchase group information.<BR>**User** - To define the data pattern used to identify users. When the user barcode is scanned at the POS, the user’s code is extracted from the barcode and the user’s information is retrieved to identify the user.<BR>**Cashier** - To define the data pattern used to print a cashier barcode to allow cashiers to sign in by scanning a barcode instead of using their user name and password.<BR>**IMEI** - To define the data pattern used to identify and validate the International Mobile Station Equipment Identity (IMEI) number. Every mobile phone, GSM modem or device with a built-in phone / modem has a unique 15 digit IMEI number.<BR>**EFTTenderReceipt** - To define the data pattern used to retrieve EFT Tender information. When a transaction is paid for with an EFT tender, a slip is generated with a barcode.<BR>**Order Service Transaction** - To define a data pattern that encodes and decodes the transaction information from the barcode printed on customer orders.<BR>**Self Scan Transaction**- To define the data pattern used to allow cashiers to retrieve Self Scan transactions.<BR>**Return Item Voucher** – To define the voucher details that is retrieved from the data pattern when a return item voucher is scanned at the POS.<BR>**External Consumption Barcode** - To define the data pattern used to print transactional barcodes for external usage on the Main Receipt.<BR><BR>**Note:** The Warm Reboot, Release Device, and IMEI data pattern types are fixed barcodes and do not have content parameters.|
+|Location|The store hierarchy to which the data pattern is linked.|
+|**Recognizers**|The method used to identify the data pattern. The options are:<BR><BR>**Prefix Length**- to identify the data pattern by the data pattern prefix length. The prefix is the identifier at the beginning of the data pattern.<BR>For example, all data patterns for items, which also include the item's price within the barcode may be defined to start with the digits 72995. When a barcode with the prefix 72995 is scanned, the system immediately identifies the type of data pattern and retrieves the price from the barcode.<BR>When selected the Length field is displayed to specify the length of the data pattern. There is no validation on the length.<BR>**Note:** The Decoded Prefix Ranges and Encoded Prefix Ranges areas are displayed only if Prefix Length is selected.<BR>**Regular Expression** - to identify the data pattern by a regular expression. A Regular Expression (Regex) is sequence of characters that forms a search pattern. Data Patterns based on Regex are recognized by a wider set of rules, based on Regex standards. Only Data Patterns that completely match the defined Regex are identified by the system. For example, Regex 2[1-2]\d{10} will match Length = 12 and Prefix= 21-22.<BR>When selected the Regular Expression field is displayed to enter the Regex.<BR>**Note:** Regex is used only for Data Patterns from which information is extracted from the barcode (Decoded Barcodes).|
+|**Decoded Prefix Ranges**|Defines the data patterns from which information is extracted. The decoding process is responsible for identifying the relevant business entity and forwarding all extracted properties to it.
+For example, Item Price embedded data patterns. When an item barcode is scanned, the data such as the price, description, etc. can be identified.
+The prefix range can identify the type of data pattern. If a scanned barcode matches more than one Data Pattern, the Data Pattern with the largest prefix that matches the scanned barcode is selected.
+The options are:
+	Fixed – the fixed data pattern prefix. All data patterns linked to this data pattern group start with the same prefix.
+	From - the prefix number from which the data pattern range starts. These are the defined digits at the beginning of the data pattern and identify the data pattern type.
+	To - the prefix up to which the data pattern type range ends.
+	Excludes – to exclude a range of prefixes within the defined decoded prefix range.
+Encoding Prefix Ranges	Defines data patterns in which the system encodes information received from a service request into the data pattern. The encoding process is responsible for generating a specific barcode followed by a request from a specific service.
+For example, a self weight barcode that is printed at the customer scale. The system encodes the item's weight when placed on the scale into the barcode. The encoding process is responsible for generating the specific barcode followed by the request from the specific service, e.g., Customer Scale.
+Another example is when the cashier saves a transaction at the POS terminal, a data pattern is printed on the customer's receipt. This data pattern can be scanned when the customer returns and the transaction is recalled. This is a Transaction data pattern type, which is encoded.
+The options are:
+	Prefix - the data pattern prefix. These are the defined digits at the beginning of the data pattern and identify the data pattern type.
+	Requesting service - The service which sends a request to encode specific information in a data pattern. 
+The following requesting services are supported:
+	Cashier
+	BlindPickup
+	GiftReceiptItem
+	SaveTransaction
+For example, when a transaction is completed,and the POS prints a Transaction Barcode on the receipt. The Transaction barcode is created by encoding all the transaction identifiers, such as Store ID, POS ID, Date, Time etc., in a Data Pattern used by the Save Transaction requesting service.
+If more than one Data Pattern with the same type is linked to the same Requesting Service, each Data Pattern is encoded, however, only one is printed randomly. 
+Validators	The validations performed to authenticate the data pattern. For example, the data pattern validity period and check digit.
+Supported validators:
+MD5 - MD5 is the last 32 digits of a barcode. The MD5 validator is used for QR Codes for verification of the data integrity.
+Begin date and 	The date from which the data pattern is valid.
+End date	The date up to which the data pattern is valid.
+Check Digit	The Check Digit validations. 
+The options are:
+	Offset – The check digits position in the data pattern.
+	Algorithm - The algorithm used to calculate the Check Digit. 
+The options are:
+	UPC - Universal Product Code. The UPC check digit is the 12th digit in the lower-right corner of the barcode.
+	LUHN – Simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.
+	NAPCD (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – the NAPCD algorithm is used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.
+	PCDV5 (Price Check Digit Variation version 5) - Algorithm calculating the check digit from the last 5 digits of the product's price.
+	Position - The starting position of the range of digits in the Data Pattern used to calculate the check digit. The check digit is used to validate the item. E.g., If the Check Digit position is 3, the first number of the Check Digit is the third digit in the Data Pattern.
+Check Digits are based on specific algorithms (UPC, LUHN) and are populated within the barcode or the numeric data.
+hen a numeric value is accepted by the POS client, i.e., in a barcode on an item, the client calculates the Check Digit, and compares it to the Check Digit embedded within the barcode.
+If the Check Digits match, the system proceeds to analyze the barcode for further details in order to perform the required activities.
+	Length - The number of digits in the check digit range the algorithm uses to calculate the Check Digit. E.g., if 3, indicates that the price check digit is calculated on 3 digits in the Data Pattern.
