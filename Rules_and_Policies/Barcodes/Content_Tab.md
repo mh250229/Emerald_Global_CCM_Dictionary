@@ -295,29 +295,125 @@ A Staff Barcode is printed after the Cashier or supervisor selects the Staff Bar
 The **IMEI** data pattern type is used to define specific mobile information, such as the IMEI number.
 
 IMEI number (International Mobile Equipment Identity) is a 15 or 17 digit unique number to identify mobile devices, as well as some other devices. It is usually found printed on the back of phones under the battery. It can also be displayed on the phones screen by entering *#06# on the phones keypad.
+
 The IMEI number is structured by the BABT (British Approvals Board for Telecommunications). It has 15 decimal digits (14 + 1 check digit). The first 8 digits in an IMEI are the TAC (Type Allocation Code), which gives you the mobile phone brand and model. The other 7 digits are defined by the manufacturer (6 are serial numbers and 1 is a check digit).
-From 2004, the IMEI format is AA BBBBBB CCCCCC D
+
+From 2004, the IMEI format is **AA BBBBBB CCCCCC D**
+
 TAC SERIAL CHECK DIGIT
+
 AA BBBBBB CCCCCC D
+
 In any of the above cases, the first two digits of the TAC are the Reporting Body Identifier, which identifies the GSMA-approved group that allocated the TAC.
+
 The RBI numbers are allocated by the Global Decimal Administrator.
+
 The first two digits are always decimal (i.e., less than 0xA0), allowing IMEI numbers to be distinguished from an MEID, which will always have 0xA0 or larger as its first two digits.
+
 Example of an IMEI number:
-35 780502 398494 2, where:
-	35 is the reporting body identifier.
-	780502 is the manufacturer and brand (phone type)
-	398494 is the serial number
-	2 is the check digit
+
+**35 780502 398494 2**, where:
+
+* 35 is the reporting body identifier.
+* 780502 is the manufacturer and brand (phone type)
+* 398494 is the serial number
+* 2 is the check digit
+
 Check Digits: The 15th or the last number of the IMEI is a check digit. The Check Digit is calculated according to Luhn formula, using the other digits in the IMEI.
+
 The purpose of the Check Digit is to help guard against the possibility of incorrect entries to the CEIR and EIR equipment.
+
 The check digit is validated in three steps:
-1.	Starting from the right, double a digit every two digits (e.g., 7 → 14).
-2.	Sum the digits (e.g., 14 → 1 + 4).
-3.	Check if the sum is divisible by 10.
+
+1. Starting from the right, double a digit every two digits (e.g., 7 → 14).
+2. Sum the digits (e.g., 14 → 1 + 4).
+3. Check if the sum is divisible by 10.
+
 Conversely, one can calculate the IMEI by choosing the check digit that would give a sum divisible by 10.
+
 In the following example, the IMEI is 35 780502 398494 ?
-IMEI number 3 5 7 8 0 5 0 2 3 9 8 4 9 4 ?
-Double every other digit 3 10 7 16 0 10 0 4 3 18 8 8 9 8 ?
-Sum all digits 3 + (1 + 0) + 7 + (1+6) + 0 + (1+0)+ 0 + 4 + 3 + (1+8) + 8 + 8 + 9 + 8 + ? = 68 + ?
+
+**IMEI number** 3 5 7 8 0 5 0 2 3 9 8 4 9 4 ?
+
+**Double every other digit** 3 10 7 16 0 10 0 4 3 18 8 8 9 8 ?
+
+**Sum all digits** 3 + (1 + 0) + 7 + (1+6) + 0 + (1+0)+ 0 + 4 + 3 + (1+8) + 8 + 8 + 9 + 8 + ? = 68 + ?
+
 Sum of all digits is 68. We need to make it divisible by 10. We need to add 2 to our Sum of 68 and this addition is our check digit. Our complete IMEI is 35 780502 398494 2.
+
 The Release Device data pattern type is a fixed barcode and does not have content parameters.
+
+![IMEI Data Pattern Type](/Images/IMEIDataPatternType.png)
+
+### EFT Tender Receipt Data Pattern Type
+
+The **EFT Tender Receipt** data pattern type enables you to define the data pattern used to retrieve EFT Tender information.
+
+When a transaction is paid for with an EFT tender, a slip is generated with a barcode. The barcode data pattern includes information such as the Transaction ID, Store Code, POS ID, and the EFT Transaction ID.
+
+![EFT Tender Receipt Data Pattern Type](/Images/EFTTenderReceiptDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Transaction ID**|The original transaction paid with an EFT tender.<br>**Position** The position in the data pattern from which the transaction ID begins in the data pattern.<br>**Length** The number of digits in the transaction ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the transaction ID are not considered in the validation, and the system validates the transaction ID without the zeros.|
+|**Store Code**|The store code.<br>**Position** The position in the data pattern from which the store code begins in the data pattern.<br>**Length** The number of digits in the store code.<br>**Strip Leading Zeros** Indicates that leading zeros in the store code are not considered in the validation, and the system validates the store code without the zeros.|
+|**POS ID**|The POS ID.<br>**Position** The position in the data pattern from which the POS ID begins in the data pattern.<br>**Length**The number of digits in the POS ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the POS ID are not considered in the validation, and the system validates the POS ID without the zeros.|
+|**EFT Transaction ID**|The EFT transaction ID.<br>**Position** The position in the data pattern from which the EFT  transaction ID begins in the data pattern.<br>**Length** The number of digits in the EFT  transaction ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the EFT  transaction ID are not considered in the validation, and the system validates the EFT  transaction ID without the zeros.|
+
+### Order Service Transaction Data Pattern Type
+
+The **Order Service Transaction** data pattern type enables you to configure a data pattern that encodes and decodes the transaction information from the barcode printed on customer orders.
+
+![Order Service Transaction Data Pattern Type](/Images/OrderServiceTransactionDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Type**|The Order Type.<BR>**Position** The position in the data pattern from which the cashier reference ID begins in the data pattern.<BR>**Length** The number of digits in the cashier reference ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the cashier reference ID are not considered in the validation, and the system validates the cashier reference ID without the zeros.|
+|**Order Number**|The order number.<br>**Position** The position in the data pattern from which the order number begins in the data pattern.<br>**Length** The number of digits in the order number<br>**Strip Leading Zeros** Indicates that leading zeros in the order number are not considered in the validation, and the system validates the order number without the zeros.|
+
+### Self Scan Transaction Data Pattern Type
+
+The **Self Scan Transaction** data pattern type enables you to define the data pattern used to allow cashiers to retrieve Self Scan transactions.
+
+When a customer finishes scanning their items, a request is sent to the Retail Gateway (RGW) to trigger an End Of Ticket (EOT) flow. The transaction is suspended and a barcode is generated, which is then sent to the Mobile Shopper client.
+
+At the POS terminal, the cashier scans or keys in the EOT barcode from the Mobile Shopper to retrieve the transaction on the POS. The transaction is retrieved and displayed on the POS. The cashier can add items, etc. and then complete the transaction.
+
+**Note:** Once the transaction is retrieved on the POS terminal, Partial/Full rescan options are available.
+
+![Self Scan Transaction Data Pattern Type](/Images/SelfScanTransactionDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Sequence Number**|The self scan transaction sequence number.<br>**Position** The position in the data pattern from which the sequence number begins in the data pattern.<br>**Length** The number of digits in the sequence number.<br>**Strip Leading Zeros** Indicates that leading zeros in the sequence number are not considered in the validation, and the system validates the sequence number without the zeros.|
+|**Store Code**|The store code.<br>**Position** The position in the data pattern from which the store code begins in the data pattern.<br>**Length** The number of digits in the store code.<br>**Strip Leading Zeros** Indicates that leading zeros in the store code are not considered in the validation, and the system validates the store code without the zeros.|
+|**POS ID**|The POS ID.<br>**Position** The position in the data pattern from which the POS ID begins in the data pattern.<br>**Length** The number of digits in the POS ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the POS ID are not considered in the validation, and the system validates the POS ID without the zeros.|
+
+### Return Item Voucher Data Pattern Type
+
+The **Return Item Voucher** data pattern type enables you to configure the data pattern to identify return item vouchers when the barcode is scanned or keyed in. For example, the barcode on the voucher printed when bottle deposits returns.
+
+![Return Item Voucher Data Pattern Type](/Images/ReturnItemVoucherDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Originating Store ID**|The ID of the store in which the item was purchased.<br>**Position** The position in the data pattern from which the originating store ID begins in the data pattern.<br>**Length** The number of digits in the originating store ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the originating store ID are not considered in the validation, and the system validates the cashier reference ID without the zeros.|
+|**Issuing Date**|The date the voucher was issued.<br>**Position** The position in the data pattern from which the issuing date begins in the data pattern.<br>**Length** The number of digits in the issuing date.<br>**Strip Leading Zeros** Indicates that leading zeros in the issuing date are not considered in the validation, and the system validates the issuing date without the zeros.|
+|**Voucher Amount**|The voucher amount.<br>**Position** The position in the data pattern from which the voucher amount begins in the data pattern.<br>**Length** The number of digits in the voucher amount.<br>**Strip Leading Zeros** Indicates that leading zeros in the i voucher amount are not considered in the validation, and the system validates the i voucher amount without the zeros.|
+
+### External Consumption Barcode Data Pattern Type
+
+The **External Consumption Barcode** data pattern type enables you to define data pattern used to print transactional barcodes for external usage on the Main Receipt.  For example, to print a lottery barcode on a lottery ticket (includes a  lottery code and RT Server ID (FiscalBoxID)), which will be used by the external system for the returns procedure, or a Gate Barcode, which may be needed by ‘smart gate’ systems to recognize a valid transaction and open the exit gates for a customer who paid inside the parking garage. 
+
+![External Consumption Barcode Data Pattern Type](/Images/ExternalConsumptionBarcode.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Store Code**|The store code.<br>**Position**	The position in the data pattern from which the store code begins in the data pattern.<br>**Length** The number of digits in the store code.<br>**Strip Leading Zeros** Indicates that leading zeros in the store code are not considered in the validation, and the system validates the store code without the zeros.|
+|**POS ID**|The POS ID.<br>**Position** The position in the data pattern from which the POS ID begins in the data pattern.<br>**Length** The number of digits in the POS ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the POS ID are not considered in the validation, and the system validates the POS ID without the zeros.|
+|**Originating Date**|The date the transaction was performed.<br>**Position** The position in the data pattern from which the originating date begins in the data pattern.<br>**Length** The number of digits in the originating date.<br>**Strip Leading Zeros** Indicates that leading zeros in the originating date are not considered in the validation, and the system validates the i originating date without the zeros.|
+|**Transaction ID**|The transaction ID.<br>**Position** The position in the data pattern from which the transaction ID begins in the data pattern.<br>**Length** The number of digits in the transaction ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the transaction ID are not considered in the validation, and the system validates the transaction ID without the zeros.|
+|**Transaction Amount**|The transaction amount.<br>**Position** The position in the data pattern from which the transaction amount begins in the data pattern.<br>**Length** The number of digits in the transaction amount.<br>**Strip Leading Zeros** Indicates that leading zeros in the transaction amount are not considered in the validation, and the system validates the transaction amount without the zeros.|
+|**User ID**|The ID of the user who printed the barcode.<BR>**Fixed** 	Defines a specific User ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The item code number<BR>**Position Length**	The position and length of the User ID in the data pattern.<BR>*Position* - The position in the data pattern from which the User ID begins in the data pattern.<BR>*Length* - The length of the item code.<br>**Manipulated** Redefines a User ID in a data pattern to enable the system to identify and match the User ID scanned in the data pattern with those defined in the Item Catalog database.<br>For example, barcodes created by retailers, which do not comply with the Barcode Unified Standards.<br>*Prefix* - The defined prefix to identify a User ID.<br>*Position* -The position in the data pattern from which the User ID begins in the data pattern.<br>*Length* -The length of the User ID.<br>*Suffix* - The defined suffix at the end of the data pattern used to identify a User ID.<br>*Check Digit Algorithm* -The algorithm used to calculate the Price Check Digit.<br>The options are:<br>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<br>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<br>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<br>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<br><br>*Strip Leading Zeros* - Indicate that leading zeros in the i User ID are not considered in the validation, and the system validates the User ID without the zeros.<br>For example: If a User ID is 0000123456789 and the cashier enters 123456789 at the POS terminal, the correct data of the User ID is extracted by the data pattern.|
+|**Customer ID**|The ID of the customer for who the barcode was printed.<br>**Fixed** Defines a specific Customer ID in the data pattern. Fixed is the default value.<br>*Fixed Value* - The Customer ID number<br>**Position Length** The position and length of the Customer ID in the data pattern.<br>*Position* - The position in the data pattern from which the Customer ID begins in the data pattern.<br>*Length* - The length of the Customer ID.<br>*Strip Leading Zeros* - Indicates that leading zeros in the Customer ID are not considered in the validation, and the system validates the Customer ID without the zeros.<br>**Manipulated**	Redefines a Customer ID number in a data pattern to enable the system to identify and match the Customer ID number scanned in the data pattern.<br>*Prefix* - The defined prefix to identify a Customer ID number.<br>*Position* -The position in the data pattern from which the Customer ID number begins in the data pattern.<br>*Length* -The length of the Customer ID number.<br>*Suffix* - The defined suffix at the end of the data pattern used to identify a Customer ID number.<br>*Check Digit Algorithm* -The algorithm used to calculate the Check Digit.<br>The options are:<br>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<br>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<br>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<br>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<br><br>*Strip Leading Zeros* - Indicate that leading zeros in the Customer ID number are not considered in the validation, and the system validates the Customer ID number without the zeros.|
+|**Loyalty Card ID**|The Customer's Loyalty card ID number.<br>**Fixed** The Customer ID in the data pattern. Fixed is the default value.<br>*Fixed Value* - The Customer ID number<br>**Position Length**<br>The position and length of the Customer ID in the data pattern.<br>*Position* - The position in the data pattern from which the Customer ID begins in the data pattern.<br>*Length* - The length of the Customer ID.<br>*Strip Leading Zeros* - Indicates that leading zeros in the Customer ID are not considered in the validation, and the system validates the Customer ID without the zeros.<br>**Manipulated** Redefines a Customer ID number in a data pattern to enable the system to identify and match the Customer ID number scanned in the data pattern.<br>*Prefix* - The defined prefix to identify a Customer ID number.<br>*Position* -The position in the data pattern from which the Customer ID number begins in the data pattern.<br>*Length* -The length of the Customer ID number.<br>*Suffix* - The defined suffix at the end of the data pattern used to identify a Customer ID number.<br>*Check Digit Algorithm* -The algorithm used to calculate the Check Digit.<br>The options are:<br>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<br>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<br>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<br>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<br><br>*Strip Leading Zeros* - Indicate that leading zeros in the Customer ID number are not considered in the validation, and the system validates the Customer ID number without the zeros.|
