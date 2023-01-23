@@ -58,4 +58,74 @@ The **Tender** data pattern type is used to configure the tender information tha
 
 The Customer data pattern type is used to configure the customer information, such as Customer and Loyalty Card IDs, that is retrieved from the Data Pattern when scanned at the POS touchpoint.
 
+![Customer Data Pattern Type Screen](/Images/CustomerDataPatternTypeScreen.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Customer ID**|The Customer ID number.<BR>**Fixed** Defines a specific Customer ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The Customer ID number<BR>**Position Length** The position and length of the Customer ID in the data pattern.<BR>*Position* - The position in the data pattern from which the Customer ID begins in the data pattern.<BR>*Length* - The length of the Customer ID.<BR>*Strip Leading Zeros* - Indicates that leading zeros in the Customer ID are not considered in the validation, and the system validates the Customer ID without the zeros.<BR>**Manipulated** Redefines a Customer ID number in a data pattern to enable the system to identify and match the Customer ID number scanned in the data pattern.<BR>*Prefix* - The defined prefix to identify a Customer ID number.<BR>*Position* -The position in the data pattern from which the Customer ID number begins in the data pattern.<BR>*Length* -The length of the Customer ID number.<BR>*Suffix* - The defined suffix at the end of the data pattern used to identify a Customer ID number.<BR>*Check Digit Algorithm* -The algorithm used to calculate the Check Digit.<BR>The options are:<BR>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<BR>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<BR>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<BR>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<BR>*Strip Leading Zeros* - Indicate that leading zeros in the Customer ID number are not considered in the validation, and the system validates the Customer ID number without the zeros.|
+|**Loyalty Account ID**|The customer’s Loyalty Account ID number.<BR>**Fixed** Defines a specific Loyalty Account ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The Loyalty Account ID number<BR>**Position Length** The position and length of the Loyalty Account ID in the data pattern.<BR>*Position* - The position in the data pattern from which the Loyalty Account ID begins in the data pattern.<BR>*Length* - The length of the Loyalty Account ID.<BR>*Strip Leading Zeros* - Indicates that leading zeros in the Loyalty Account ID are not considered in the validation, and the system validates the Loyalty Account ID without the zeros.<BR>**Manipulated** Redefines a Loyalty Account ID number in a data pattern to enable the system to identify and match the Loyalty Account ID number scanned in the data pattern.<BR>*Prefix* - The defined prefix to identify a Loyalty Account ID number.<BR>*Position* -The position in the data pattern from which the Loyalty Account ID number begins in the data pattern.<BR>*Length* -The length of the Loyalty Account ID number.<BR>*Suffix* - The defined suffix at the end of the data pattern used to identify a Loyalty Account ID number.<BR>*Check Digit Algorithm* -The algorithm used to calculate the Price Check Digit.<BR>The options are:<BR>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<BR>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<BR>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<BR>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<BR>*Strip Leading Zeros* - Indicate that leading zeros in the Loyalty Account ID number are not considered in the validation, and the system validates the Loyalty Account ID number without the zeros.|
+|**Scheme ID**|The Loyalty Scheme ID.<BR>**Fixed** Defines a specific Loyalty Scheme ID in the data pattern.<BR>Loyalty schemes are used to offer specific customers exclusive promotions, additional discounts, and special rewards. Each Loyalty scheme has a unique ID that is associated to the customer’s Loyalty card based on the data pattern.<BR>*Fixed Value* - The Loyalty Scheme ID number|
+
+### End Of Trip Data Pattern Type
+
+The **End Of Trip** data pattern type is used to define transaction information from the Self Scan. When a customer finishes scanning products with a Self Scan device and comes to the POS touchpoint to pay for their purchases, the barcode is scanned the transaction information is retrieved from the Self Scan device.
+
+![End Of Trip Data Pattern Type](/Images/EndOfTripDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Store ID**|The ID of the store in which the End Of Trip function was performed.<BR>**Position** The position in the data pattern from which the Store ID begins in the data pattern.<BR>**Length** The number of digits in the Store ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Store ID are not considered in the validation, and the system validates the Store ID without the zeros.|
+|**Touchpoint**|The ID of the touchpoint on which the End Of Trip barcode was scanned.<BR>**Position** The position in the data pattern from which the Touchpoint ID begins in the data pattern.<BR>**Length** The number of digits in the Touchpoint ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Touchpoint ID are not considered in the validation, and the system validates the Touchpoint ID without the zeros.|
+|**Force Partial Rescan**|Indicates is a forced partial rescan is required. If the system detects a partial rescan is required, the system prompts the appropriate message, and based on configuration may indicate how many items need to be rescanned.<br>**Position** The position in the data pattern from which the Force Partial Rescan indication begins in the data pattern.<BR>**Length** The number of digits in the Force Partial Rescan indication.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Force Partial Rescan indication are not considered in the validation, and the system validates the Force Partial Rescan indication without the zeros.|
+
+### Cradle Data Pattern Type
+
+The **Cradle** data pattern type is used to define the data pattern used to identify the Self Scan device. The Cradle data pattern includes the rack and cradle ID codes.
+
+![Cradle Data Pattern Type](/Images/CradleDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Rack ID**|The number of the slot in which the Self Scan device is placed when not in use.<BR>**Position** The position in the data pattern from which the Rack ID begins in the data pattern.<BR>**Length** The number of digits in the Rack ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Rack ID are not considered in the validation, and the system validates the Rack ID without the zeros.|
+|**Cradle ID**|The ID of the cradle in which the Self Scan device is placed after a transaction.<br>**Position** The position in the data pattern from which the Cradle ID begins in the data pattern.<br>**Length** The number of digits in the Cradle ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the Cradle ID are not considered in the validation, and the system validates the Cradle without the zeros.|
+
+### Detailed Order Code Data Pattern Type
+
+The **Detailed Order Code** data pattern type is used to support configuring QR Codes.
+
+The following example shows the structure of a Pharmacy QR Code:
+
+PH340000139S@93104883211171234010520bb048799fb7173c99d5dee3fc6900
+
+The breakdown is:
+
+* Type - REGEX
+* PH – the Id of the data pattern
+* 340000139 – the sales order
+* S – indicates if the QR Code is for a sale or return transaction
+* @ - the delimiter indicating the beginning of an item line
+* 93104883211171234 – PLU number (embedded barcode + the last 4 digits indicate the QTY
+* 010 – sales item
+* 520bb048799fb7173c99d5dee3fc6900 – Hashed MD5 validator
+
+![Detailed Order Code Data Pattern Type](/Images/DetailedOrderCodeDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Barcode-Contained Order**|The barcode for the QR Code Order.<br>**Position** The position in the data pattern from which the Barcode-Contained Order begins in the data pattern.<BR>**Length** The number of digits in the Barcode-Contained Order<BR>**Strip Leading Zeros** Indicates that leading zeros in the Barcode-Contained Order are not considered in the validation, and the system validates the Barcode-Contained Order without the zeros.|
+|**Order Number**|The number of the order<br>**Position** The position in the data pattern from which the Order Number begins in the data pattern.<br>**Length** The number of digits in the Order Number.<br>**Strip Leading Zeros** Indicates that leading zeros in the Order Number are not considered in the validation, and the system validates the Order Number without the zeros.|
+|**Order Label**|The label name used to differentiate between the order types.<br>**Fixed** Defines a specific order label in the data pattern. Fixed is the default value.<br>*Fixed Value* - The order label.<br>**Position Length** The position and length of the order label in the data pattern.<br>*Position* - The position in the data pattern from which the order label begins in the data pattern.<br>*Length* - The length of the order label.<br>*Strip Leading Zeros* - Indicates that leading zeros in the order label are not considered in the validation, and the system validates the order label without the zeros.|
+|**Transaction Type**|The Transaction type indication.<br>**Fixed Value** The Transaction type indicator.<br>S indicates a Sales transactions.<br>R indicates a Refund transaction.|
+|**Item Quantity Group Name**|The item quantity group name for a group of items displayed under a group title on the XLR POS.<BR>F**ixed Value** The item quantity group name.|
+|**Item Code Group Name**|The item code group name for a group of items displayed under a group title on the XLR POS. This is mandatory if a SingleItemRegexPattern is defined<BR>**Fixed Value** The item code group name.|
+|**Item Sequence Number Group Name**|The reference for the item sequence for a group of items displayed under a group title on the XLR POS.<BR>**Fixed Value** The item sequence number group name.|
+|**Single Item Regex Pattern**|The grouping mechanism that contains the Regex expression to extract the item details from the QR code.<BR>**Fixed Value** The single item Regex pattern name.|
+|**Items Section**|The items section extracted from the QR Code.<BR>If not defined, the items are retrieved from the entire QR code.<BR>**Fixed Value** The Item numbers.|
+|**Item Section Group Name**|The name of the item section that must be extracted within the Order QR Code.<BR>**Fixed Value** The item section group name, e.g., Item.|
+|**POS EJ Display**|Specifies how the items in the QR Code are displayed on the POS.<BR>**Fixed Value** When selected, indicates that the items added via a QR code defined in the data pattern are grouped. If not selected, the items are added as regular items, and are not grouped.|
+
+### Databar Item Data Pattern Type
+
+The **Databar Item** data pattern type is used to define the data pattern used to identify GS1 Databar items.
+
 
