@@ -202,4 +202,122 @@ The **Coupon** data pattern type is used to configure the coupon's promotion inf
 
 The **Transaction** data pattern type is used to configure the transaction details in a barcode, e.g., a saved transaction would include the Originating Store, POS ID, Transaction ID, Originating Date and Amount. This information is encoded in the barcode.
 
+![Transaction Data Pattern Type](/Images/TransactionDataPatternType.png)
 
+|**Field**|**Description**|
+|---------|----------|
+|**Transaction ID**|The Transaction ID number.<BR>**Position** The position in the data pattern from which the transaction ID number begins in the data pattern.<BR>**Length** The number of digits in the transaction ID number.<BR>**Strip Leading Zeros** Indicates that leading zeros in the transaction ID number are not considered in the validation, and the system validates the transaction ID number without the zeros.|
+|**Store Code**|The ID of the store in which the transaction is performed.<br>**Position** The position in the data pattern from which the store code begins in the data pattern.<br>**Length** The number of digits in the store code.<br>**Strip Leading Zeros** Indicates that leading zeros in the store code are not considered in the validation, and the system validates the store code without the zeros.|
+|**POS ID**|The number of the POS touchpoint on which the transaction was issued/redeemed.<br>**Position** The position in the data pattern from which the POS ID begins in the data pattern.<br>**Length** The number of digits in the POS ID.<br>**Strip Leading Zeros** Indicates that leading zeros in the POS ID are not considered in the validation, and the system validates the POS ID without the zeros.|
+|**Originating Date**|The date on which the transaction was performed.<br>**Position** The position in the data pattern from which the originating date begins in the data pattern.<br>**Type** The format used to enter the originating date. For example, YYMM, YMMDDHHmm|
+|**Transaction Amount**|The transaction amount.<br>**Position** The position in the data pattern from which the transaction amount begins in the data pattern.<BR>**Length** The length of the transaction amount.<BR>**Decimal** The number of decimal digits in the transaction amount.|
+
+### Gift Receipt Data Pattern Type
+
+The **Gift Receipt** data pattern type is used to define Gift Receipt issued when items are purchased as gifts, to enable the gift recipient to return or exchange the gift without the sales ticket.
+
+![Gift Recceipt Data Pattern Type](/Images/GiftReceiptDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Item Price**|The price of the Gift Receipt item.<br>**Fixed** Defines a specific coupon ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The coupon ID number<BR>**Position Length** The position and length of the Gift Receipt price in the data pattern.<BR>*Position* - The position in the data pattern from which the item price begins in the data pattern.<BR>*Length* - The length of the item price.<BR>*Decimals* - The number of decimal digits in the item price.|
+|**Originating Store ID**|The ID of the store in which the Gift Receipt was issued.<BR>**Position** The position in the data pattern from which the Originating Store ID begins in the data pattern.<BR>**Length** The number of digits in the Originating Store ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Originating Store ID are not considered in the validation, and the system validates the Originating Store ID without the zeros.|
+|**Originating POS ID**|The ID of the POS on which the Gift Receipt was issued.<BR>**Position** The position in the data pattern from which the Originating POS ID begins in the data pattern.<BR>**Length** The number of digits in the Originating POS ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the Originating POS ID are not considered in the validation, and the system validates the Originating POS ID without the zeros.|
+|**Transaction Code**|The number of the transaction in which the Gift Receipt was issued.<BR>**Position** The position in the data pattern from which the transaction code begins in the data pattern.<BR>**Length** The number of digits in the transaction code.<BR>**Strip Leading Zeros** Indicates that leading zeros in the transaction code are not considered in the validation, and the system validates the Originating POS ID without the zeros.|
+|**Expiry Date**|The date on which the Gift Receipt expires.<BR>**Position** The position in the data pattern from which the expiry date begins in the data pattern.<BR>**Type** The format used to enter the expiry date. For example, YYMM, YMMDDHHmm|
+|**Close Transaction Date**|The date on which the transaction in which the Gift Receipt was issued was closed.<BR>**Position** The position in the data pattern from which the close transaction date begins in the data pattern.<BR>**Type** The format used to enter the close transaction date. For example, YYMM, YMMDDHHmm|
+|**Item Code**|The item code of the Gift Receipt.<BR>**Fixed** Defines a specific item code in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The item code number<BR>**Position Length** The position and length of the item code in the data pattern.<BR>*Position* - The position in the data pattern from which the item code begins in the data pattern.<BR>*Length* - The length of the item code.<BR>**Manipulated** Redefines an item code in a data pattern to enable the system to identify and match the item scanned in the data pattern with those defined in the Item Catalog database.<BR>For example, barcodes created by retailers, which do not comply with the Barcode Unified Standards.<BR>*Prefix* - The defined prefix to identify an Item Code.<BR>*Position* -The position in the data pattern from which the item code begins in the data pattern.<BR>*Length* -The length of the item code.<BR>*Suffix* - The defined suffix at the end of the data pattern used to identify an Item Code.<BR>*Check Digit Algorithm* -The algorithm used to calculate the Price Check Digit.<BR>The options are:<BR>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<BR>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<BR>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<BR>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<br><br>*Strip Leading Zeros* - Indicate that leading zeros in the item code are not considered in the validation, and the system validates the item number without the zeros.<br>For example: If an item code is 0000123456789 and the cashier enters 123456789 at the POS terminal, the correct data of the item code is extracted by the data pattern.|
+
+### Blind Pickup Data Pattern Type
+
+The **Blind Pickup** data pattern type is used to retrieve Blind Pick up information. A Blind Pickup is performed by the cashier when the amount of cash in the drawer exceeds a specified limit. The cashier removes the money from the drawer without counting the money, and the money is transferred to the Cash Office to be counted and transferred to the safes. When Blind Pickup is performed, a slip is generated with a barcode. The barcode data pattern includes information such as the pickup type and lift number, as well as the date the pickup was performed and the POS touchpoint on which the pickup was performed.
+
+![Blind Pickup Type](/Images/BlindPickupType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Blind Pickup Type**|The type of blind pickup, e.g., 0 indicates a Till Pickup, 1 indicates a TPF deposit.<BR>**Position** The position in the data pattern from which the blind pickup type begins in the data pattern.<BR>**Length** The number of digits in the blind pickup type.<BR>**Strip Leading Zeros** Indicates that leading zeros in the blind pickup type are not considered in the validation, and the system validates the blind pickup type without the zeros.|
+|**Lift Number**|The blind pickup counter.<BR>**Position** The position in the data pattern from which the lift number begins in the data pattern.<BR>**Length** The number of digits in the lift number.<BR>**Strip Leading Zeros** Indicates that leading zeros in the blind pickup type are not considered in the validation, and the system validates the lift number without the zeros.|
+|**POS ID**|The ID number of the POS on which the Blind Pickup was performed.<BR>**Position** The position in the data pattern from which the POS ID begins in the data pattern.<BR>**Length** The number of digits in the POS ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the POS ID are not considered in the validation, and the system validates the POS ID without the zeros.|
+|**Creation Date**|The date and time the blind pickup was performed.<BR>**Position** The position in the data pattern from which the creation date begins in the data pattern.<BR>**Type** The format used to enter the creation date. For example, YYMM, YMMDDHHmm|
+
+### Online Services Profile Data Pattern Type
+
+The **Online Services Profile** data pattern type is used to define the details of the provider to which the authorization request is sent by the EPS during the Online Item Authorization process. This is mandatory when the online purchase item is processed with EPS.
+
+![Online Services Profile Data Pattern Type](/Images/OnlineServicesProfileDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|Profile ID|The ID of the provider authorizing the online item.<BR>**Fixed** Defines a specific Profile ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The Profile ID number|
+
+### Group Data Pattern Type
+
+The **Group** data pattern type is used to define Online Purchase Group information. This data pattern types points to the group. In a scenario in which the group is an online purchase group, when the data pattern is identified, the list of items attached to the group are presented at the POS.
+
+![Group Data Pattern Type](/Images/GroupDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Group ID**|The group ID.<br>**Position Length** The position and length of the group ID in the data pattern.<br>*Position* - The position in the data pattern from which the group ID begins in the data pattern.<br>*Length* - The length of the group ID.<br>*Strip Leading Zeros* - Indicate that leading zeros in the group ID are not considered in the validation, and the system validates the group ID without the zeros.<BR>**Fixed** Defines a specific group ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The group ID number|
+|**External ID**|The group external ID.<BR>**Position Length** The position and length of the group external ID in the data pattern.<BR>*Position* - The position in the data pattern from which the group external ID begins in the data pattern.<BR>*Length* - The length of the group external ID.<BR>*Strip Leading Zeros* - Indicate that leading zeros in the group external ID are not considered in the validation, and the system validates the group ID without the zeros.<BR>**Fixed** Defines a specific group external ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The group ID number|
+
+### User Data Pattern Type
+
+The User data pattern type enables you to define user barcodes to identify users. When the user barcode is scanned at the POS, the user’s code is extracted from the barcode and the user’s information is retrieved to identify the user.  For example, the cashier arrives at work, swipes their employee card. The system identifies the User’s code from the barcode and prompts the user to enter their password to continue working on the system.
+
+In addition, if the customer has a specific convention when defining users in the system, the user barcodes can be manipulated so that the user code matches the customer code convention as it appears in the user database. When the user barcode is scanned at the POS, the correct user is identified.  This is required when a retailer creates their own barcodes for their users to comply with an external employee system.
+
+**Note:** In addition to the User data pattern, the Cashier and User Credentials data patterns can also used to identify users. The User data pattern is the most secure as once the barcode is scanned, the user is still required to enter their password. The Cashier data pattern is less secure, although the user still has to enter their cashier reference. The User Credentials data pattern is the least secure as once the barcode is scanned, the user ID and password are identified by the system and the user can access the system without any further identification.
+
+![User Data Pattern Type](/Images/UserDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**User ID**|The user's ID.<BR>**Fixed** Defines a specific User ID in the data pattern. Fixed is the default value.<BR>*Fixed Value* - The item code number<BR>**Position Length** The position and length of the User ID in the data pattern.<BR>*Position* - The position in the data pattern from which the User ID begins in the data pattern.<BR>*Length* - The length of the item code.<BR>**Manipulated** Redefines a User ID in a data pattern to enable the system to identify and match the User ID scanned in the data pattern with those defined in the Item Catalog database.<BR>For example, barcodes created by retailers, which do not comply with the Barcode Unified Standards.<BR>*Prefix* - The defined prefix to identify a User ID.<BR>*Position* -The position in the data pattern from which the User ID begins in the data pattern.<BR>*Length* -The length of the User ID.<BR>*Suffix* - The defined suffix at the end of the data pattern used to identify a User ID.<BR>*Check Digit Algorithm* -The algorithm used to calculate the Price Check Digit.<BR>The options are:<BR>UPC - the Universal Product Code. All UPC barcodes include a check digit. The UPC check digit is the 12th digit in the lower-right corner of the barcode.<BR>LUHN - the Luhn algorithm is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers.<BR>NAPCD - (North American Price Check Digit) - North American POS Product Sold by Weight/Measure) – used in North America to calculate the check digit for products sold by weight/measure. These products are identified with VMN-12 where the U.P.C. Prefix is 2. The check digit is calculated using the last 4 digits of the item price.<BR>PCDV5 -(Price Check Digit Variation (Version5) - calculates the check digit using the last 5 digits of the product's price.<BR><BR>*Strip Leading Zeros* - Indicate that leading zeros in the i User ID are not considered in the validation, and the system validates the User ID without the zeros.<BR>For example: If a User ID is 0000123456789 and the cashier enters 123456789 at the POS terminal, the correct data of the User ID is extracted by the data pattern.|
+
+### Cashier Data Pattern Type
+
+The **Cashier** data pattern type is used to define the data pattern used to allow cashiers, supervisors or attendants to sign in by scanning a barcode instead of using their user name and password. The data pattern includes an embedded Reference ID assigned by the system to ensure the cashier barcode is unique.
+
+A Cashier Barcode is printed after the cashier signs in to the POS touchpoint with a user name and password, the cashier selects the **Cashier Barcode** button. A unique barcode is printed and assigned to the cashier. The cashier can then use this barcode to sign in to the touchpoint. Each time the cashier prints a new barcode, the new barcode overrides the previous one.
+
+A Staff Barcode is printed after the Cashier or supervisor selects the Staff Barcode button and enables supervisors and attendants to print an Authentication Barcode Slip without having to log in to the POS as is required today when printing a Cashier Barcode. An authentication barcode is used to initiate authentication of the user. For example, on selling an age restricted item that requires supervisor approval, or a Business Rule triggered during an activity that requires supervisor approval, the user can scan a barcode that initiates the authentication of the user who is approving the activity. The authentication barcode is valid for a defined period (configurable). The cashier or supervisor selects the Staff Barcode option.
+
+![Cashier Data Pattern Type](/Images/CashierDataPatternType.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Cashier Reference ID**|The cashier reference ID used to match to the cashiers defined in the database.<BR>**Position** The position in the data pattern from which the cashier reference ID begins in the data pattern.<BR>**Length** The number of digits in the cashier reference ID.<BR>**Strip Leading Zeros** Indicates that leading zeros in the cashier reference ID are not considered in the validation, and the system validates the cashier reference ID without the zeros.|
+
+### IMEI Data Pattern Type
+
+The **IMEI** data pattern type is used to define specific mobile information, such as the IMEI number.
+
+IMEI number (International Mobile Equipment Identity) is a 15 or 17 digit unique number to identify mobile devices, as well as some other devices. It is usually found printed on the back of phones under the battery. It can also be displayed on the phones screen by entering *#06# on the phones keypad.
+The IMEI number is structured by the BABT (British Approvals Board for Telecommunications). It has 15 decimal digits (14 + 1 check digit). The first 8 digits in an IMEI are the TAC (Type Allocation Code), which gives you the mobile phone brand and model. The other 7 digits are defined by the manufacturer (6 are serial numbers and 1 is a check digit).
+From 2004, the IMEI format is AA BBBBBB CCCCCC D
+TAC SERIAL CHECK DIGIT
+AA BBBBBB CCCCCC D
+In any of the above cases, the first two digits of the TAC are the Reporting Body Identifier, which identifies the GSMA-approved group that allocated the TAC.
+The RBI numbers are allocated by the Global Decimal Administrator.
+The first two digits are always decimal (i.e., less than 0xA0), allowing IMEI numbers to be distinguished from an MEID, which will always have 0xA0 or larger as its first two digits.
+Example of an IMEI number:
+35 780502 398494 2, where:
+	35 is the reporting body identifier.
+	780502 is the manufacturer and brand (phone type)
+	398494 is the serial number
+	2 is the check digit
+Check Digits: The 15th or the last number of the IMEI is a check digit. The Check Digit is calculated according to Luhn formula, using the other digits in the IMEI.
+The purpose of the Check Digit is to help guard against the possibility of incorrect entries to the CEIR and EIR equipment.
+The check digit is validated in three steps:
+1.	Starting from the right, double a digit every two digits (e.g., 7 → 14).
+2.	Sum the digits (e.g., 14 → 1 + 4).
+3.	Check if the sum is divisible by 10.
+Conversely, one can calculate the IMEI by choosing the check digit that would give a sum divisible by 10.
+In the following example, the IMEI is 35 780502 398494 ?
+IMEI number 3 5 7 8 0 5 0 2 3 9 8 4 9 4 ?
+Double every other digit 3 10 7 16 0 10 0 4 3 18 8 8 9 8 ?
+Sum all digits 3 + (1 + 0) + 7 + (1+6) + 0 + (1+0)+ 0 + 4 + 3 + (1+8) + 8 + 8 + 9 + 8 + ? = 68 + ?
+Sum of all digits is 68. We need to make it divisible by 10. We need to add 2 to our Sum of 68 and this addition is our check digit. Our complete IMEI is 35 780502 398494 2.
+The Release Device data pattern type is a fixed barcode and does not have content parameters.
