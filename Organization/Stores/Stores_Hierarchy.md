@@ -15,3 +15,5 @@ Stores are defined and linked to the hierarchy in **Business Units/Stores**.
 
 |**Field**|**Description**|
 |---------|----------|
+|**Name**|The name of the node in the hierarchy. On selecting an existing node in hierarchy, the Name field is automatically populated with the name.<BR>If the Name field is blank, you can enter the name of a new node you want to add to the hierarchy.|
+|**Parent**|The parent level of the node displayed in the Name field. You can move a node to a different level in the hierarchy by selecting another parent node.|
