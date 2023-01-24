@@ -29,4 +29,19 @@ For example: Create a POS touchpoint with a printer, PIN pad, POS display, drawe
 |**Touchpoint Group**|The touchpoint group the touchpoint is assigned to.
 |**Touchpoint Type**|The touchpoint application assigned to the touchpoint. Touchpoint Applications define the specific settings that are required in order for the touchpoint to function properly, such as Keyboard, Screen Layout and Menu configuration.|
 
-Reference Path: Organization/Touchpoints/Touchpoints/Add New 
+**Reference Path:** *Organization/Touchpoints/Touchpoints/Add New*
+
+![Touchpoint Form](/Images/TouchpointForm.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**ID**|The touchpoint ID. The touchpoint ID can be defined as a string or an integer of up to 50 characters. For example, 111, Aaa, A1a, 1Aa.|
+|**Store**|The store the touchpoint is linked to.|
+|**Touchpoint Group**|The Touchpoint Group the touchpoint is linked to, e.g., Self-Checkout, Full Service.<BR>**Note:** Touchpoint groups must be set up before creating a touchpoint.|
+|**General**||
+|Touchpoint type|The touchpoint application assigned to the touchpoint. Touchpoint applications define specific settings required for the touchpoint to function properly, such as Keyboard, Screen Layout and Menu configuration.|
+|IsClustered|Indicates if more than one touchpoint application instance can be registered to the same server, for example, in a cluster touchpoint environment, an Emerald Global POS and FLSCO can share the same Touchpoint ID, meaning they can share the same transactions.<BR>If selected, the touchpoint is part of a cluster instance and can be registered to the same server as another touchpoint ID, for example, an Emerald Global POS and FLSCO can share the same Touchpoint ID.<BR>If not selected, the touchpoint can only be registered with its own ID and is not part of a cluster instance. This is the default value.
+|**Devices**|
+|Devices|The peripheral devise linked to the touchpoint, e.g., printer|
+|**Secondary Touchpoint Group**||
+|Secondary Touchpoint Groups|The secondary touchpoint group assigned to the touchpoint.<BR>All Touchpoints must be assigned to a Primary Touchpoint Group. Touchpoints requiring specific configuration are also linked to a Secondary Touchpoint Group.|
