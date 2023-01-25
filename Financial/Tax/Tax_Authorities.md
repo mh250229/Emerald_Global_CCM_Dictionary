@@ -7,3 +7,10 @@ The Tax Authority determines the tax rates that need to be imposed.
 Multiple tax rates are applied based on the Tax Authorities such as: state, county, city, region, district, etc.
 
 **Reference Path:** *Financial/Taxes/Tax Authorities*
+
+![Tax Authorities Screen](/Images/TaxAuthoritiesScreen.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Id**|The unique Tax Authority ID number.|
+|**Description**|The Tax Authority name.|
