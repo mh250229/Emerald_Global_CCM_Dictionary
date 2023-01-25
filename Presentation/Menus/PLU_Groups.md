@@ -16,8 +16,6 @@ After a PLU Menu is set up, you can assign the menu to selected business units, 
 
 ![PLU Groups Screen](/Images/PLUGroupsScreen.png)
 
-View the fields as follows:
-
 |**Field**|**Description**|
 |---------|----------|
 |**Business Unit**|The store the PLU Group is assigned to. Once a store is selected, all PLU Groups defined for the selected store are displayed.|
