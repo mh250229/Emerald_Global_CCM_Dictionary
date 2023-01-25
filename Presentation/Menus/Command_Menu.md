@@ -1,0 +1,32 @@
+## Command Menu
+
+**Command Menus** are used to create command menus, which comprise the functions performed at the touchpoints. Each button at the touchpoint is a command. For example, Void, Refund, Cashback, Enter, OK are all commands. All commands are predefined in the system and a command menu is defined for each touchpoint state, i.e., No Sale Mode, Sale Mode, Tender Mode, and so on.
+
+There are multiple default states, and each one comprises commands relevant to the state. A command may be available in more than one state.
+
+You can group the commands in a menu by creating command groups. This enables you to group commands with similar functionality, i.e., a group of special return types can be set up as part of a Special Returns Command Group. This saves space as well as helps you organize your commands logically. Once you create Command Groups, you can link them to a specific command menu.
+
+There are commands that can be excluded from a specific state, unless they are set up in the system as mandatory. For example, the OK, Cancel, Back buttons are commands which are mandatory to all menus, and cannot be excluded.
+
+You can create Command Menus for both touch and non-touch touchpoints. When using a non-touch touchpoint, the user is required to map the hard keys and soft keys to commands.
+
+Once you create commands for a specific touchpoint, only those commands are available on the touchpoint.
+
+In addition, you can assign roles to a specific state, for example, you can specify that only supervisors can perform the commands defined in the HelloLoginModeCommandsGroup state or to a specific command group.
+
+**Note:** Roles assigned in the User module are assigned according to business activities, whereas Roles assigned to states or command groups are done at menu level.
+
+**Reference Path:** *Presentation/Menus/Command Menu*
+
+![Command Screen](/Images/CommandMenuScreen.png)
+
+|**Field**|**Description**|
+|---------|----------|
+|**Location**|The business unit for which you want to define the Command menu.|
+|**Touchpoint Group Type**|The touchpoint group type to display the menu. **Primary Touchpoint Groups** or **Secondary Touchpoint Groups**.<BR>For example, all POS touchpoints are assigned to the same Primary Touchpoint Group, however, some of the POS touchpoints may require a different Tender menu. Those POS touchpoints are assigned to a Secondary Touchpoint Group, and the Command Menu configuration is assigned to the Secondary Touchpoint Group only. The menu configuration is then applied only to the touchpoints in the Secondary Touchpoint Group and not to all the touchpoints in the Primary Touchpoint Group.|
+|Touchpoint Group|The specific touchpoint group in the selected Business Group for which you want to define the Command menu.|
+|Touchpoint Type|The touchpoint type in the selected touchpoint group for which you want to define the Tender menu. The options are:<BR>POS, Self Scan Device, Self Scan EU, Self Checkout, Fuel POS, Unknown.|
+|Version|The HQ server version you want to configure/view the Command Menu for. The current HQ version is displayed by default.<BR>When a retailer upgrades their stores to a new Emerald Global version, they are able to maintain the Command Menu configuration for both the old and the new versions so that the stores with the old version may still use the old configuration plus any updates that apply to all the stores, and stores with the new version are able to use an updated configuration that many include new features.<BR>For example, if a new command is added in Version 10.11, but is not supported in Version 10.10, the retailer can have different data in the Command menu in the different versions.<BR>One or more versions are supported.<BR>If only one version is displayed, for example, 10.11.0.0, all the data was upgraded to the current version (e.g. 10.11) and any old data was deleted.<BR>If two versions are displayed, for example, 10.11.0.0 and 10.10.0.0,  HQ was upgraded (e.g. 10.11) but some of the data (or the entire data) is on an older version (e.g. 10.10).<BR>If three or more versions are displayed, for example, 10.11.0.0, 10.10.0.0 and 10.9.0.0, HQ was updated but some of the data is on an older version (10.10) and another data is on a different older version (e.g. 10.9).<BR>To select a version, from the Version drop-down list select the version for which you want to view or update data the Command Menu. You can view or update the menus for the current and older versions.<BR>Note: The drop down displays the version naming: 10.11.0.0, 10.10.0.0, 10.9.0.0, etc. It is assumed the user making the changes is familiar with the version naming.|
+|**States**|The states available in the system. Each state contains the relevant commands. On selecting a state from the drop-down list, the Commands linked to the selected state are displayed in the Commands area.<BR>For example, if you select SaleTransactionCommands, the commands relevant to sales transactions, e.g., Tender Selection, Select Department Sale, Search commands and so on, are displayed.<BR>For a full description of each State and the Commands in each State, see Command States.<BR>The option to add a role to a State is available, however, it is only applicable to the HelloLoginModeCommandGroup state.<BR>**Note:** The States drop-down list is enabled only after you have selected the default menu or another menu on which to base the Command Menu you are creating.|
+|**Commands**|A list of all the commands relevant to the selected state. The number of commands in the selected state is displayed in parenthesis.|
+|**Groups**|Command groups are commands with similar functionality. You can, for example, group the Tax Exempt, Tax Reverse commands in the Taxes command group.<BR>Command Groups must be created and then added to a menu. You can then add the specific commands to the group.<BR>When creating a Command Group, you can assign a Role to the group to restrict access to the functions in the group. For example, you can create a Command Group comprising the Void Item, Void Transaction, and Return commands and restrict the Command Group to supervisors only. Only users linked to the Supervisor Role can then perform these functions.<BR>In addition to the commands selected in a Command Group, a Go Back command is also displayed by default. On selecting the Go Back button, the system re-validates the user's permissions each time the user accesses the Command Group.|
