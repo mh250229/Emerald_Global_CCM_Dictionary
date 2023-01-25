@@ -55,6 +55,6 @@ On selecting a Soft Key, the command to the left of the key is triggered. For ex
 |Touchpoint Groups|The touchpoint groups to which the keyboard applies.|
 |**Key Bindings**|The bindings for different keys|
 |Key Code|The unique virtual code for a key. The virtual code is the ASCII code for the numbers and letters on the keyboard. Some codes, such as the up/down arrows on the keyboard, do not have an ASCII code, only a virtual code.|
-|Modifier|The modifier that applies an additional command to the key. Modifiers enable you to assign 4 commands to one key.<BR>The modifier options are: (no modifier) / Ctrl / Alt / Shift<BR>For example, you can assign key F12 to a command. You can use it for a different command by selecting Ctrl + F12.
-|Command|The function assigned to the key.
+|Modifier|The modifier that applies an additional command to the key. Modifiers enable you to assign 4 commands to one key.<BR>The modifier options are: (no modifier) / Ctrl / Alt / Shift<BR>For example, you can assign key F12 to a command. You can use it for a different command by selecting Ctrl + F12.|
+|Command|The function assigned to the key.|
 |Parameter|The value of a specific function type, for example, if you assigned a preset item to a key, you can then specify the item number.<BR>The Parameter option is relevant to Preset Commands only.|
