@@ -1,0 +1,10 @@
+## Activities Search
+
+**Activities Search** monitors cash office activities between accounts for specific stores and Cash Office activities. The module includes a enhanced search function, enabling you to retrieve a log of cash office activities performed in a specific store, during a defined period, and then drill down to view the details of each activity.
+
+**Reference Path:** *Cash Office/Cash Office Audit/Activities Search*
+
+![Cash Office Activities Search Screen](/Images/CashOfficeActivitiesSearchScreen.png)
+
+|**Field**|**Description**|
+|---------|----------|
