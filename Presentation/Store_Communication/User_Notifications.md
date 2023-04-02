@@ -21,7 +21,7 @@ User Notification messages are supported on the POS, Keyboard POS, QSR POS, and 
 |**Touchpoint Group**|The Touchpoint Groups in which the user notification message is displayed.|
 |**Activation Period From**|The date and time from which the user notification message is displayed.|
 |**To**|The date and time up to which the user notification message is displayed.|
-|**Appear On**|Indicates when the user notification message is displayed at the touchpoint. For example, Sign on indicates that the user notification message is displayed when the cashier signs on to the touchpoint. Currently, User Notification messages are displayed only during Sign On.|
+|**Appear On**|Indicates when the user notification message is displayed at the touchpoint.<BR>The options are:<BR><BR>Sign On - the user notification message is displayed when the cashier signs on to the touchpoint.<BR>No sale mode - the message is sent at the earliest available time when the POS is not in an active transaction.|
 |**User Notifications Grid**||
 |Name|The name of the user notification message|
 |Business Unit|The locations in which the user notification is displayed.|
@@ -37,7 +37,7 @@ User Notification messages are supported on the POS, Keyboard POS, QSR POS, and 
 |**Name**|The name of the user notification message|
 |**Store**|The locations where the user notification is displayed.
 |**Touchpoint Group**|The Touchpoint Groups in which the user notification message is displayed.|
-|**Appear On**|Indicates when the user notification message is displayed at the touchpoint. For example, Sign on indicates that the user notification message is displayed when the cashier signs on to the touchpoint. Currently, User Notification messages are displayed only during Sign On.|
+|**Appear On**|Indicates when the user notification message is displayed at the touchpoint.<BR>The options are:<BR><BR>Sign On - the user notification message is displayed when the cashier signs on to the touchpoint.<BR>No sale mode - the message is sent at the earliest available time when the POS is not in an active transaction|
 |**Recurrence**|Specifies if the User Notification message is displayed each time the user signs in to the touchpoint or only one a day.<BR>The options are:<BR><BR>**Always** – the message is prompted the first time the user logs in each day<BR>**Daily** – the message is prompted each time the user logs in|
 |Activation Period<BR>From  / To|The date and time period during which the user notification message is displayed.|
 |Notification Header|The title of the user notification message.|
