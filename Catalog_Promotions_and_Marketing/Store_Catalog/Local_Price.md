@@ -21,6 +21,7 @@ When an item is scanned at the POS, the system will display the store’s most r
 |End Date|The date up to which the new price is applied to the item. By default, the current date/time is applied. The date can only be changed to a future date.|
 |End Time|The time up to which the new price is applied to the item.|
 |Reason|The reason the item price was changed.|
+|Original Price|The item’s last effective price that is not a result of local price change.|
 |Current Effective Price|The current price of the item. This price cannot be changed.
 |Quantity|The quantity to which the price applies. This field can only be updated if no previous price existed.|
 |Unit Of Measure|The Unit of measurement to which the price applies. This field can only be updated if no previous price existed.|

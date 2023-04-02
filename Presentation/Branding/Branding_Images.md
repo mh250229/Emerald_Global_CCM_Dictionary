@@ -41,6 +41,10 @@ The default images include:
 |**Cashier Display**|Lists the screens on which the images are displayed on the Cashier Display/POS.|
 |Logo|The logo image displayed on all the screens on the POS.<br>The image is placed in a set position and cannot be moved.<br>The Position option is not enabled.|
 |Logo (Training Mode)|The logo image displayed on all the screens on the POS when working in Training Mode.<br>The image is placed in a set position and cannot be moved.<br>The Position option is not enabled.|
+|No sale mode (Right up)|The image is displayed in the top right side in the No Sale screen.|
+|PLU menu (Right up)|The image is displayed in the top right side of the PLU Menu screen.|
+|Thank you prompt (Cashier/Customer)|The image displayed in the Thank you screen displayed on the Cashier and Customer Displays.|
+|Item not found prompt|The image displayed on the item not found screen displayed when a scanned item is not found.|
 |Login Screen|The Cashier Login screen used to log in to the POS.|
 |**CCM Office**||
 |Logo|The logo image displayed on the screens in the CCM Office. The image is placed in a set position and cannot be moved.<BR>The Position option is not enabled.|
