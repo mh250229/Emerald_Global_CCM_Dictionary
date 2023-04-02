@@ -129,3 +129,155 @@ The following image show you how to find the owners. If you created an owner und
 1. From the left-hand side column, select Overview > Endpoints.   
 There are endpoints which are required in the development.
 ![Endpoints screen](/Images/endpointsscreen.png)
+
+### Logging in to the CCM
+
+1. Set the Authentication Mode = OIDC (External) in the Security Policy screen.
+1. Perform an IIS Reset if the UI is not updated.
+![CCM Authentication Mode screen](/Images/ccmauthenticationmodescreen.png)
+Once the **Authentication Mode** is set to **OIDC**, the Log in page is displayed as follows. Only the User Name field is available.
+![CCM log in screen](/Images/ccmlogin.png)
+![CCM enter password screen](/Images/ccmenterpasswordscreen.png)
+Once you enter the User Name, the following parameters are checked and only when they pass validation, you can login.
+* The configuration Entry table should have data related to OIDC
+* The Domain Name of the User Name should match the Retailer’s Domain Name value in the Configuration Entry table
+
+Once you have logged in from the External IDP, the Emerald Global server validates the token which is passed in the header, and performs the following:
+* Checks if the **Creation Time (Issued at "iat") is not more than 60 secs and if "nbf" is valid**.
+* Checks if the ‘Token’ is valid and if we can decode and use the ‘USER_UNIQUE_IDENTIFIER’ (Each EXTERNAL IDP provider can have a different option for the identifier value → UPN/EMAIL/OID/ etc.), then check that this identifier value from the decoded token exists in the database (IN ‘AppUser’ table → ‘DomainUserName’ column).
+
+ONLY if the ‘USER_UNIQUE_IDENTIFIER’ (UPN/EMAIL/OID ) is found on our side, an Emerald Global session is created. A user must be added to the App_Users table with the Domain Name that matches the USER_UNIQUE_IDENTIFIER.
+
+Only when the above two conditions are satisfied, the Emerald Global session is created and you are successfully logged into the CCM.
+
+### Logout Mechanism
+
+Once you select CCM Logout, it checks if the IDPForceLogout is set to true and if you are an external user, and then redirects you to log out from both the CCM and the external Authenticator.
+
+The following screen is displayed, and when you select your account, you are logged out of both.
+
+![Sign out Pick an account screen](/Images/signoutpickanaccountscreen.png)
+
+### RTIs
+
+The following RTI is used to enter the data in the Configuration Entry Table.
+
+```json
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigurationMaintenanceRequest MajorVersion="1" xmlns="http://retalix.com/R10/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://retalix.com/R10/services file:///D:/Development/R10/Contracts/Src/Retalix.Contract.Schemas/Schema/Services/Configuration/ConfigurationV1.0.0.xsd">
+  <RequestHeader />
+  <Configuration Name="OIDC">
+    <ConfigurationEntry>
+      <Entry>Authority</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>https://login.microsoftonline.com/8ee2cc4f-c54d-4001-b8bc-96627668a305</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>AutomaticSilentRenew</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.Boolean</ValueType>
+      <DefualtValue>false</DefualtValue>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>ClientID</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>3eecee8a-32ec-4994-8af2-eda6897e5f10</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>ClientRoot</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>http://localhost:3002/</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>ClientScope</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>openid profile email</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>DefaultTokenExpirationRenewalTime</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.Int32</ValueType>
+      <DefualtValue>170</DefualtValue>
+      <Value>170</Value>
+    </ConfigurationEntry>   
+    <ConfigurationEntry>
+      <Entry>IdpForceLogout</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.Boolean</ValueType>
+      <DefualtValue>true</DefualtValue>
+      <Value>true</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>IdpOpenIdConfiguration</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>https://login.microsoftonline.com/8ee2cc4f-c54d-4001-b8bc-96627668a305/v2.0/.well-known/openid-configuration</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>LoadUserInfo</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.Boolean</ValueType>
+      <DefualtValue>true</DefualtValue>
+      <Value>true</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>RedirectURI</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>http://localhost:3002/signin-callback</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>ResponseType</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>code</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>RetailerDomain</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>asda.com</Value>
+    </ConfigurationEntry>
+    <ConfigurationEntry>
+      <Entry>UserUniqueIdentifier</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.String</ValueType>
+      <DefualtValue />
+      <Value>upn</Value>
+    </ConfigurationEntry>
+     <ConfigurationEntry>
+      <Entry>MaxTokenIatAgeActiveTimeInSeconds</Entry>
+      <Description TypeCode="Long" />
+      <ValueType>System.Int32</ValueType>
+      <DefualtValue />
+      <Value>360</Value>
+    </ConfigurationEntry>
+  </Configuration>
+</ConfigurationMaintenanceRequest>
+```
+
+OIDCConfigurationLookupRequest RTI example:
+
+```rti
+<OIDCConfigurationLookupRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorVersion="1" xmlns="http://retalix.com/R10/services">
+  <Header>
+    <MessageId Name="R10 Client" Timestamp="2023-03-16T14:25:22.8965127Z">424</MessageId>
+  </Header>
+</OIDCConfigurationLookupRequest>
+```
+
+**Note:**
+
+On logging in to Spooky, the POS continues with the internal users using the user name and password, even if the system is configured to OIDC.
