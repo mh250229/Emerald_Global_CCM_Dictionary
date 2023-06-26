@@ -2,8 +2,9 @@
 
 **Receipt Messaging** is used to define and format the message printed in the receipt footer. You can print free text messages, such as announcements, store opening hours, and any other communication messages relevant to the store, in the receipt footer. Different messages can be configured for different Locations and Touchpoint Groups (Primary/Secondary).
 
-**Reference Path:** *Rules & Policies /Receipts/Receipt Messaging*
+**Reference Path:** *Rules & Policies/Receipts/Receipt Messaging*
 
+![Receipt Messaging Screen](/Images/ReceiptMessagingScreen.png)
 
 |**Field**|**Description**|
 |---------|----------|
