@@ -13,7 +13,7 @@
 |End Date|The date up to which you want to search for item price changes.|
 |Item Code|The item code for which the price changed.|
 |Item Description|The name of the item for which the price changed.|
-|Original Price|The original price of the item prior to being changed.|
+|Last Effective Price|The original price of the item prior to being changed.|
 |Local Price|The current price of the item, after it was changed.|
 |Start Date|The date on which the new price was applied.|
 |Expiry date|The date on which the new price is no longer applied.|

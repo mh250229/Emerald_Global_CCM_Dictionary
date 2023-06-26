@@ -2,6 +2,8 @@
 
 **Local Price** is used to update prices in the stores. Prices can be entered for a specific store and applied for a limited time period. The system tracks who made the change and when. Existing prices are not overwritten (even if they are not used) and no access is given to other stores.
 
+If you try to update an item price and the new price is greater than the original price, you are prompted to confirm the price change. You can either confirm the new price or return to the Edit Local Price screen and enter a different price.
+
 When an item is scanned at the POS, the system will display the store’s most recent active price for the item.
 
 **Note:** Local price changes can also be made in the Product Maintenance module in the Price screen, however, the user who made the change is not recorded, and there is no way to track the user who made the change.
