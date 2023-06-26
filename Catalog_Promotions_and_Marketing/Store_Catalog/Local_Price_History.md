@@ -17,6 +17,6 @@
 |Local Price|The current price of the item, after it was changed.|
 |Start Date|The date on which the new price was applied.|
 |Expiry date|The date on which the new price is no longer applied.|
-|User|The username of the use who made the price change.|
+|User|The username of the user who made the price change, displayed in accordance with the configuration of General Data Protection Regulations (GDPR).|
 |Input Time|A time stamp showing when the time and date on which the price was changed.|
 |Reason|The reason for the price change.|

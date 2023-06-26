@@ -121,6 +121,7 @@ The actions that can be selected and applied to a Role. The actions define the a
 |Configure Restriction|To enable users to apply selling restrictions to a product in the store catalog.|
 ||Configure Store Range|To enable users to configure the stores in which products can be sold.|
 |Promotion|Configure|To enable users to set up promotions.|
+|Receipt Messaging|Customer Message|To enables users to add, edit or delete or view the ‘Receipt Custom Messaging’ screen.|
 |Refund Policy|Configure|To enable users to set up the store's return policy.|
 |Regional Settings|Culture Maintenance|To enable users to set up and apply the culture settings used in the store environment to support multi languages.|
 ||Resources Export|To enable users to export the resource files containing a language to be translated.|

@@ -21,6 +21,7 @@ A user is assigned both, for example, if they are required to access both the St
 |**First Name**|The user’s first name.|
 |**Last Name**|The user’s last name.<BR>To comply with EU GDPR (European Union General Data Protection Regulations) requirements 75% of the user’s last name is masked, showing minimum one letter. All masking is done on the end of the name. For example:<BR>Johnson = Jo***** <BR>Levi = L*** <BR>Dan = D** <BR>Lo = L*<BR>If only one user is retrieved, the user's last name is not masked.|
 |**Role**|The role assigned to the user.|
+|**Status**|The status assigned to the user.|
 |**Users Grid**|
 |User Name|The name assigned to the user|
 |First Name|The user’s first name.|

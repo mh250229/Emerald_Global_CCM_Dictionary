@@ -53,6 +53,7 @@ The Business Rule module includes:
 * **System Environment Conditions** – to trigger messages when the store server is offline, e.g., if you want to prevent the cashier from recalling saved transactions while the server is offline.
 * **Role Conditions** - to prohibit users with permissions to adjust specific cash office activities from adjusting a specific cash office activity by role in a BRM.
 * **Batch Order Conditions** – trigger messages when a QR Code is scanned in a transaction, for example, to prevent the cashier from voiding a single item in a QR Code.
+* **Partial Payment  Condition** – to prohibit voiding/adding items in a transaction that were partially paid for with a specific tender
 
 **Reference Path:** *Rules & Policies/Rules/Business Rules*
 
@@ -165,6 +166,8 @@ The user is not obligated to define all the conditions. It depends on the busine
 |Batch Order Type|Currently only QR Code is supported.||
 |Batch Order Label|The label used to differentiate between batches of the same type, for example pharma and Deli.||
 |**Batch Combination**|Applies a rule to define which batch label combination will trigger the BRM. You can use it to prevent specific QR Codes from being sold in the same transaction.<BR>![Batch Combination Condition](/Images/BatchCombinationCondition.png)<BR>The options are:<BR>**Batch Order Type** – includes all the batch order types, currently QR Code.<BR>**Batch Order Label** – a free text field to enter which Batch orders combination will trigger the  action of the BRM defined. This field is only enabled once the Batch Order Type field is selected.<BR>**For example:**<BR>If the following BRM is defined:<BR>BRM Type – Batch Order<BR>Batch Order Type – QR Code<BR>Batch Order Label - PH<BR>Batch Combination Condition:<BR>Batch Order Type: QR Code<BR>Batch Order Label – FO.<BR>Action – Prohibit (Message: Action Prohibited).<BR><BR>If the cashier scans the QR Code of type PH, and then scans another QR Code of type FO. The BRM is triggered and the POS prompts: Action Prohibited.|Batch Order|
+| **Partial Payment Condition**|Applies a rule to prohibit voiding/adding items in a transaction that were partially paid for with a specific tender.<BR>![Partial Payment Condition Screen](/Images/partialpaymentcondition.png)|Product / Department<br>Void Item|
+
 
 ### Action Tab
 
