@@ -63,3 +63,6 @@ Cash Office Accounts are used when performing activities with the different medi
 |Roles|The role which must be assigned to a user to allow the user to approve the Paid Out amount. Only roles which include the Approve Pay In Out Exceeded Threshold action in the Cash Office section can be selected. See Operations/Security/Roles.|
 |**Tax Association**|Records cash office transaction tax amounts in the transaction.
 |Allow Tax Entry|When set to Yes, on performing a Paid in or Paid Out at the POS touchpoint, the cashier is required to enter the tax amount charged.|
+|**Associated Accounts**||
+|Associated Accounts|The relevant account types that the Income and Expense Accounts are associated with. The options are:<BR>* Till<BR>* Safe<BR>* Cashier<BR>**Note**:<BR>When no accounts are selected, all Paid In/Paid Out Accounts are associated to Income and Expense Accounts. (Default)|
+|
