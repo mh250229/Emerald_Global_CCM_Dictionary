@@ -36,3 +36,19 @@
 |Tender ID|The tender used in the cash office activity.<BR>**Note:** Only the tenders defined in the Tenders module for the selected cash office activity can be selected.|
 |Amount|The amount of each tender used in the cash office activity.|
 |Converted Rate|The equivalent tender amount in the local currency. When entering an amount in a foreign currency, the system calculates the amount in the local currency based on the currency rates defined in Currency Exchange Rates. Once the tender amount is converted to the local currency, the system automatically populates the Converted Rate field with the converted amount.|
+
+### Tax Rates
+
+The Tax Rates screen displays all the tax rates defined in the Tax Rates module.
+
+![Tax Rates Screen](/Images/BusinessPeriodsActivitiesTaxRatesScreen.png)
+
+View the fields as follows:
+
+|**Field**|**Description**|
+|---------|----------|
+|**Description**|The name of the tax rate.|
+|**Method**|The method used to calculate the tax rate, e.g., Percent, Fixed.|
+|**Rate**|The tax rate value.|
+|**Tax Amount**|The tax amount applied in the Cash Office Activity. You can manually enter the tax amount to be applied in the Cash Office Activity based on the relevant Tax Rate.<BR>The Tax Amount can be adjusted based on the Tax Entry is Adjustable parameter in the Account Profile screen. When selected, the Tax Amount can be adjusted.<BR>If the parameter is not selected, the Tax Amount field cannot be adjusted. See also: Account Profile.<BR>On viewing the Tax Rates screen from the Activity Search screen, the Tax Amount field is read-only and cannot be changed.<BR>**Note**: Adjusting tax amounts does not flag the activity as an adjusted transaction. Searching for adjusted Cash Office Activities in the Activities Search screen does not retrieve activities in which only the tax amount was adjusted.|
+|**Total**|The total tax amount applied in the Cash Office Activity.|
