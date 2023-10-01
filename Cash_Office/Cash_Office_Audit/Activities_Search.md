@@ -15,7 +15,7 @@
 |**Touchpoint ID**|The touchpoint whose activities you want to view.|
 |**Start Business Date**|The date from which you want to view the cash office activity.|
 |**End Business Date**|The date up to which you want to view the cash office activity.|
-|**Adjusted Transactions Only**|Indicates that only Cash office activities in which at least one adjustment was performed are retrieved and displayed in the Cash Office Activities Log grid.|
+|**Monetary Adjusted Transactions Only**|Indicates that only Cash office activities in which at least one adjustment was performed are retrieved and displayed in the Cash Office Activities Log grid.|
 |**Cash Office Activities Log**||
 |Transaction Date|The date and time the cash office transaction was performed.|
 |ID|The ID of the cash office activity transaction. The ID is a hyperlink that opens a the general and tender details of the cash office activity.|
@@ -35,12 +35,15 @@
 |---------|----------|
 |**General**||
 |Store|The name of the store in which the cash office activity was performed.|
-|Activity Name|The name of the cash office activity.|
+|Activity Name|The name of the cash office activity.|\
+|Id|The ID of the cash office transaction.|
 |From Account|The account from which money was transferred.|
 |To Account|The account to which money was transferred.|
-|Id|The ID of the cash office transaction.|
 |Business Date|The business date the transaction was performed on.|
 |Total Converted Amount|The total amount of money (foreign currency) after the amount is converted into the local currency for the activity.|
+|Reference|The activity reference defined when performing the activity.|
+|Tax Amount|The tax amount applied in the Cash Office Activity.<BR>If the Tax Amount is based on a Tax Rate, the  ![Tax rate icon](/Images/taxrateicon.png) icon is displayed.<BR>On clicking the icon, the Tax Rates screen is displayed. See also: Tax Rates.|
+|**Additional Info**|Displays additional information relevant to Cash Office Activities, for example, the name of a second cashier who counted the Safe amounts in a Bank Deposit.<BR>This field is displayed based on the configuration of the **AdditionalInfo** parameter in the CashOfficeActivityConfigurationMaintenanceRequest RTI.<BR>The configuration options are:<BR>* Optional – the Additional Info field is displayed as optional.<BR>* Mandatory - the Additional Info field is displayed as mandatory.<BR>* Not Required - the Additional Info field is not displayed.|
 |**Tenders**||
 |Transaction Date|The date on which the transaction was performed.|
 |User Name||The name of the user who performed the transaction.|

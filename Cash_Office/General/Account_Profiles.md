@@ -61,8 +61,13 @@ Cash Office Accounts are used when performing activities with the different medi
 |Manager Approval for Paid Out Lower than|The minimum amount that can be accepted in a Paid Out activity. When the amount is less than the minimum amount, the Manager Approval message is prompted, and the manager must approve the Paid Out amount before the transaction is completed.|
 |Manager Approval Message|The message displayed when Manager Approval is required for a Paid Out amount that exceeds the specified minimum and maximum amount limits.|
 |Roles|The role which must be assigned to a user to allow the user to approve the Paid Out amount. Only roles which include the Approve Pay In Out Exceeded Threshold action in the Cash Office section can be selected. See Operations/Security/Roles.|
-|**Tax Association**|Records cash office transaction tax amounts in the transaction.
-|Allow Tax Entry|When set to Yes, on performing a Paid in or Paid Out at the POS touchpoint, the cashier is required to enter the tax amount charged.|
-|**Associated Accounts**||
-|Associated Accounts|The relevant account types that the Income and Expense Accounts are associated with. The options are:<BR>* Till<BR>* Safe<BR>* Cashier<BR>**Note**:<BR>When no accounts are selected, all Paid In/Paid Out Accounts are associated to Income and Expense Accounts. (Default)|
-|
+|**Tax Association**|Records cash office transaction tax amounts in the transaction.<BR>Tax amounts can be based on fixed amount or tax rate. For example, on purchasing items from a supplier, different VAT rates may be applied to items in the invoice. On performing a Paid Out to pay the supplier, users can manually add the tax amount based on the tax rate for each item in the invoice.|
+|None|Indicates that tax amounts cannot be entered in Paid in or Paid Out Cash Office Activities. (Default)|
+|Allow Tax Entry|Indicates that on performing a Paid in or Paid Out, the user can enter a Total Tax amount.<BR>**Note**: The **Allow Tax Entry** field is only used to record fixed Tax Amounts.|
+|Allow Tax Entry by VAT Rate|Indicates that on performing a Paid in or Paid Out, the user can enter the tax amount based on the VAT rate applied to the item.|
+|Tax Entry is Adjustable|Indicates that the tax amount based on the VAT rate can be adjusted.<BR>See also: Tax Rates<BR>**Note**: The **Tax Entry is Adjustable** field is enabled only when the **Allow Tax Entry by VAT Rate** option is selected.
+|**Associated Accounts**|The Cash Office accounts associated to Income and Expense Accounts.<BR>Some Income and Expense Accounts are relevant only to specific account types, for example, employee reimbursement is paid from a Till account, and voucher payment is only relevant to Safe Accounts.|
+|Associated Account|The relevant account types that the Income and Expense Accounts are associated with. The options are:<BR>* Till<BR>* Safe<BR>* Cashier<BR>**Note**: When no accounts are selected, all Paid In/Paid Out Accounts are associated to Income and Expense Accounts. (Default)<BR>For example, when an Income and Expense Account is associated to a specific Till Account, at the POS, on selecting the Paid In/Paid Out function, only the associated Till Accounts are displayed.|
+|**Restricted Tenders Per Activity**|Specifies the tenders that can be used in Paid In/Paid Out Cash Office Activities associated with Income and Expense accounts in all Business Units and Touchpoint Groups.<BR>**Note**: The **Restricted Tender Per Activity** section is only displayed for Income and Expense Account Profiles.|
+|Paid In Restricted for Tenders|The tenders that can be used as payment in a Paid In activity.|
+|Paid Out Restricted for Tenders|The tenders that can be used for payment in a Paid Out activity.|
