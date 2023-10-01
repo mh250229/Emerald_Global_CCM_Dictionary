@@ -162,7 +162,8 @@ The actions that can be selected and applied to a Role. The actions define the a
 ||Void Linked Item|To enable users to void linked items in a sales transaction.|
 ||Void Tender|To enable users to void a tender accepted as payment in a sales transaction.|
 ||Void Transaction|To enable users to void a sales transaction before the transaction is completed.|
-|Sales Transaction|Eat In Transaction|To enable users to perform an Eat In transaction, in which a specific tax rate is applied on items that are consumed on site.|
+|Sales Transaction|Basket Calculation Transaction|To enable users to create a Customer Order Basket Calculation transaction type to calculate the item’s prices and promotions.|
+||Eat In Transaction|To enable users to perform an Eat In transaction, in which a specific tax rate is applied on items that are consumed on site.|
 ||E-GIFT Balance Check|To enable users to query the balance of a gift card.|
 ||Post Update Sales Transaction||
 ||Recall Sales Transaction|To enable users to recall a sales transaction that was previously saved.|
