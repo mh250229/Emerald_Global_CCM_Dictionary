@@ -16,7 +16,11 @@ Business Periods are approved only once the accounts are balanced or the managem
 |---------|----------|
 |**Store**|The store in which to view a Till Business period.|
 |**Business Periods**||
-|Approved||
+|Add Activity|Click to add a Cash Office Activity to the Business period. When clicked, the Activities screen is displayed, and you can select an activity, enter the relevant details, and add the activity to the Business period.<BR>**Note**: The **Add Activity** and **Declare** links are disabled for users assigned to a role prohibited from performing Cash Office Activities on a past date.<BR>The Roles prohibited from performing Cash Office Activities on a past date are configured via the ProhibitedRolesForPastDatesInCashOfficeActivities parameter in the OfficeBusinessConfigurationMaintenanceRequest RTI.|
+|Declare|Click to declare the undeclared accounts in the Business Period. When selected, the Activities/Till Declaration form is displayed. You can declare the account as required.|
+|Approve All|Click to approve all the balanced accounts in the selected Business Period.|
+|Settle|Click to settle the selected Business Period.|
+|Approved|Indicates that the Business Period was approved.|
 |Started|The date from which the Business Period started. The date is a hyperlink which opens the Edit Till/Cashier Business Period depending on the accountability method used in the store.|
 |End by|The date on which the Business Period ended.|
 |Unbalanced accounts|The number of **unbalanced accounts** out of the **total number of accounts** in the Business Period. Unbalanced accounts have either an over or short amount.<BR>An **over amount** means that the declared Tender is greater than the calculated value, it is reflected as Over with a positive value<BR>A **short amount** means that the declared Tender is less than the expected value, it is reflected as Short with a negative value<BR>Only active accounts, i.e., accounts linked to active Account Profiles are included in the number of Unbalanced Accounts.<BR>**Note:** Account history for the periods during which the Cash Office Account was active can be viewed even if the Account is currently linked to an inactive Account Profile.|
