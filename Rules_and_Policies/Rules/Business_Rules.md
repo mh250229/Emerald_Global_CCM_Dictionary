@@ -119,6 +119,7 @@ The following Business Rule Types are supported.
 |**Void item**|To evaluate the items voided in a transaction.|**Limit Value** – to specify the maximum amount of voided item.<BR>**Limit Type** – to specify if the Limit Value is per item line or in the entire transaction.<BR>**Max amount per ticket** – the maximum amount that can be voided in a transaction.<BR>**Max allowed per line** – the maximum amount that can be voided in line of a transaction.|
 |**Void tab**|To evaluate voided tabs|**Apply only if transaction contains authorized online item** – indicates that the rule is triggered only if authorized online items are included in the tab.|
 |**Void transaction**|To evaluate voided transactions.<BR>This rule can also be triggered in return transactions.|**Apply only if transaction contains authorized online item** – indicates that the rule is triggered only if authorized online items are included in the transaction.|
+|**Void Tender**|To evaluate if Supervisor Approval is prompted when a cashier voids a tender at the POS.|**Max Tender Line Amount** – to specify the maximum tender amount that can be voided without supervisor approval.|
 
 ### Generic Rule Conditions 
 
