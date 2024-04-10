@@ -39,7 +39,10 @@
 
 ### Tax Rates
 
-The Tax Rates screen displays all the tax rates defined in the Tax Rates module.
+The Tax Rates screen displays all the tax rates defined in the Tax Rates module. See also: Tax Rates.  
+During a Cash Office Activity flow for a Paid In or Paid Out, The Tax Rates screen is displayed and the user can enter a Tax Amount for each tax rate.  
+The following screen shows an example of the Tax Rates screen:
+
 
 ![Tax Rates Screen](/Images/BusinessPeriodsActivitiesTaxRatesScreen.png)
 
@@ -47,8 +50,10 @@ View the fields as follows:
 
 |**Field**|**Description**|
 |---------|----------|
-|**Description**|The name of the tax rate.|
+|**Description**|The name of the tax rate defined in the system.|
 |**Method**|The method used to calculate the tax rate, e.g., Percent, Fixed.|
-|**Rate**|The tax rate value.|
-|**Tax Amount**|The tax amount applied in the Cash Office Activity. You can manually enter the tax amount to be applied in the Cash Office Activity based on the relevant Tax Rate.<BR>The Tax Amount can be adjusted based on the Tax Entry is Adjustable parameter in the Account Profile screen. When selected, the Tax Amount can be adjusted.<BR>If the parameter is not selected, the Tax Amount field cannot be adjusted. See also: Account Profile.<BR>On viewing the Tax Rates screen from the Activity Search screen, the Tax Amount field is read-only and cannot be changed.<BR>**Note**: Adjusting tax amounts does not flag the activity as an adjusted transaction. Searching for adjusted Cash Office Activities in the Activities Search screen does not retrieve activities in which only the tax amount was adjusted.|
+|**Rate**|The tax rate of the defined tax.|
+|**Tax Amount**|When the Tax Entry Details field is set to By Tax Amount - indicates that the system only calculates the total Tax Amount based on the tax amount(s) entered by the user for existing Tax rates.<br>By Taxable amount – indicates that the taxable amount can be entered per existing Tax rate. Based on the taxable amount entered by the user and the tax rate, the system will calculate and display the tax and total amount per Tax Rate and the overall Total Amount after Tax.<br>The tax amount applied in the Cash Office Activity.<br>When the **Tax Entry Details** field in the Account Profiles/Tax Association is set to By Tax Amount, you can manually enter the tax amount to be applied in the Cash Office Activity based on the relevant Tax Rate. The system calculates the total Tax Amount based on the tax amount(s) entered by the user for existing Tax rates. See also: Account Profile.<br>If the **Tax Entry Details** field is set to **By Taxable Amount**, you can enter the taxable amount per Tax rate in the Net Price field, and the system calculates and displays the tax and total amount. At that point (or later when opening an existing activity) the user can correct the Tax Amount (within the specified correction range) that was calculated by the system in case of any differences in rounding done by the system and compared to the original receipt for that activity.<br><br>**Note:** On clicking the OK button in the Tax Rates screen, if no tax or net price, i.e., the taxable amount has been entered, the system prompts a configurable error message: e.g., ‘Tax does not exist for any of the tax rates’ and when clicking OK on the error message the Tax entry screen is not closed.<br>The user must enter a Tax/Net price (Taxable amount). You cannot save an activity if there is not at least one Tax/Net Price (Taxable amount) entered for one of the existing tax rates.<br><br>On viewing the **Tax Rates** screen from the **Activity Search s**creen, the **Tax Amount** field is read-only and cannot be changed.<br><br>**Note:** Adjusting tax amounts does not flag the activity as an adjusted transaction.|
+|**Net Price**|The taxable amount per tax rate. (The user who enters the taxable amount, normally has the original receipt that belonged with that activity. This receipt should contain the net price next to the tax and total amounts.)<br><br>**Note:** The **Net Price** and **Total Amount** fields are only displayed if the **Tax Entry Details** field in the Account Profiles/Tax Association drawer is set to **By Taxable Amount**. See Account Profiles.<br>![Tax Rates Screen](/Images/TaxRatesNetPriceScreen.png)|
+|**Total Amount**|The total amount (calculated total by the system, based on the taxable amount entered and the tax rate)|
 |**Total**|The total tax amount applied in the Cash Office Activity.|
