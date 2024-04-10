@@ -18,19 +18,22 @@
 |**Bank Deposit**|To record money transferred money from the safe to the bank, automatically decreasing the In-safe totals.|
 |**Bank Receipt**|To record money that was received from the bank, automatically increasing the In-safe totals. Once a Receipt has been recorded, the accountability of the money is transferred to the Safe.|
 |**Safe Transfer**|To record money transferred from one safe to another safe.
-|**Safe Declaration**|To declare the money in the safe. Only Tenders defined as Safe Declaration tenders, e.g., Cash, can be declared.
+|**Safe Declaration**|To declare the money in the safe. Only Tenders defined as Safe Declaration tenders, e.g., Cash, can be declared.|
+||On selecting a Cash Office Activity, e.g., Paid In, the following screen is displayed.<br>![Cash Office Pain In Screen](/Images/cashofficepaidinscreen.png)
 |**From Account**|The account from which money is transferred. For example, a Tender Pickup is transferred from the Store Till account.<br>Only active accounts, i.e., accounts linked to active Account Profiles can be selected.<br>**Note:** This field is not displayed for Till Declaration and Safe Declaration activities.|
 |**To Account**|The account to which money is transferred. For example, a Tender Pickup is transferred to the Store Safe account.<BR>Only active accounts, i.e., accounts linked to active Account Profiles can be selected.<BR>**Note**: If there are accounts associated to Income and Expense Accounts, all the Cash Office accounts are displayed in the To Account drop-down list. However, only the associated Paid In or Paid Out accounts can be added to the Transaction List.<BR>If an unassociated Paid In or Paid Out account is selected, the following message is prompted, ‘The selected financial account is not valid for the selected Till or Safe types. Please make a different account selection’.<BR>See also: Account Profiles|
 |Reference|The activity reference for each cash office activity performed in the store. This is a free text field and can contain up to 40 characters.|
 |**Additional Info**|Displays additional information relevant to Cash Office Activities, for example, the name of a second cashier who counted the Safe amounts in a Bank Deposit.<BR>This field is displayed based on the configuration of the **AdditionalInfo** parameter in the CashOfficeActivityConfigurationMaintenanceRequest RTI.<BR>The configuration options are:<BR>* Optional – the Additional Info field is displayed as optional.<BR>* Mandatory - the Additional Info field is displayed as mandatory.<BR>* Not Required - the Additional Info field is not displayed.|
 |Pick Account|The account for which the is performed. For example, a safe declaration can be performed on the Main Safe Account.<br>**Note:** This field is displayed only for Till Declaration and Safe Declaration activities.|
-|**Transaction List**|Displays the details of the cash office activity transaction.|
+|**+ Add New**|Click to add a new Cash Office activity. On selecting **+ Add New**, the **Transaction List** and **Transaction Tender List** are displayed.|
+|**Transaction List**|Displays the details of the cash office activity transaction.<br>![Safe Pending Periods Screen](/Images/activitiestransactionlistscreen.png)|
 |Transaction ID|The Transaction ID number of the selected Cash Office Activity. The system automatically assigns the Transaction ID number once the tenders and amounts in the Transaction Tender List grid are defined, and the Cash Office Activity is saved.|
 |Transaction Date|The date the selected Cash Office activity was performed. The system automatically assigns the time once the tenders and amounts in the Transaction Tender List grid  are defined, and the Cash Office Activity is saved.|
 |From Account|The account from which money for the defined activity is transferred from.|
 |To Account|The account to which money for the defined activity is transferred to.|
 |Account|The account for which the defined activity is performed. The Account value is automatically populated when  button is clicked.<BR>**Note:** The Account field is displayed when Till Declaration, Bank Deposit, and Safe Declaration are selected.|
 |Total|The total activity amount.|
+|Tax|The tax amount added in the selected Cash Office Activity. The Tax amount can be adjusted.<br>When the tax amount is based on a tax rate, the   icon is displayed in the Tax field.<br>On clicking the ![Tax rate icon](/Images/taxrateicon.png) icon, the Tax Rates screen is displayed. See also: Tax Rates.<br>**Note:** The Tax field is displayed when Paid In or Paid Out is selected.|
 |Reference|The activity reference for each cash office activity performed in the store. This is a free text field and can contain up to 50 characters.|
 |**Transaction Tender List**|Displays the details of the tenders used in the cash office activity.|
 |Tender ID|The tender used in the cash office activity.<BR>**Note:** Only the tenders defined in the Tenders module for the selected cash office activity can be selected.|
@@ -39,8 +42,8 @@
 
 ### Tax Rates
 
-The Tax Rates screen displays all the tax rates defined in the Tax Rates module. See also: Tax Rates.  
-During a Cash Office Activity flow for a Paid In or Paid Out, The Tax Rates screen is displayed and the user can enter a Tax Amount for each tax rate.  
+The **Tax Rates** screen displays all the tax rates defined in the Tax Rates module. See also: Tax Rates.  
+During a Cash Office Activity flow for a Paid In or Paid Out, the Tax Rates screen is displayed and the user can enter a Tax Amount for each tax rate.  
 The following screen shows an example of the Tax Rates screen:
 
 
@@ -57,3 +60,37 @@ View the fields as follows:
 |**Net Price**|The taxable amount per tax rate. (The user who enters the taxable amount, normally has the original receipt that belonged with that activity. This receipt should contain the net price next to the tax and total amounts.)<br><br>**Note:** The **Net Price** and **Total Amount** fields are only displayed if the **Tax Entry Details** field in the Account Profiles/Tax Association drawer is set to **By Taxable Amount**. See Account Profiles.<br>![Tax Rates Screen](/Images/TaxRatesNetPriceScreen.jpg)|
 |**Total Amount**|The total amount (calculated total by the system, based on the taxable amount entered and the tax rate)|
 |**Total**|The total tax amount applied in the Cash Office Activity.|
+
+### Entering the Taxable Amount in the Activities Screen for a new Paid Out Activity 
+
+**Prerequisites:**
+
+Configure Tax Rates – for example, 0%, 9%, and 21%.
+
+The Cash Office Profile, with account A linked, is configured as an ‘Income and Expense’ type account with Source Activities set to Paid In and Target Activities set to Paid Out.
+
+For the Income and Expense account type, the Account Profile configuration ‘Allow Tax Entry’ field is set to ‘Yes’ and ‘Tax Entry Details’ is set to ‘By Taxable Amount’.
+
+The User is configured with Cash Office Permissions.
+
+1. Log in to the CCM.
+1. Browse to Cash Office/Business Periods/Activities and open the Activities Screen
+1. Select a store and select Paid Out.
+1. For the From Account and To Account fields select the Till from which you are performing the pay out and the Income and Expense account to which you are performing the payout.
+1. In the Reference field enter a reference, if relevant.
+1. Select Add New +.  
+![Tax Rates Screen](/Images/newpaidoutscreen.png)  
+1. In the Transaction List window in the line of the new Paid Out activity, select the icon next to the Tax field.  
+![Transaction List window](/Images/transactionlistwindow.png)  
+The Tax Rates screen is displayed, and there is an option to enter the taxable amount per tax rate. 
+Enter a taxable amount for at least one tax rate. When exiting the Taxable Amount/Net Price field, or when saving the activity, the Tax and Total amounts are calculated by the system.  
+If the system is configured to Allow Tax entry corrections, a correction can be made to the Tax amount that was calculated by the system in case of any difference between the tax amount calculated and the tax amount on the original receipt:
+![Tax rates screen](/Images/taxratestaxratesscreen.png) 
+1. Select OK to save the tax. 
+![Tax rates screen](/Images/savetaxscreen.png) 
+1. Enter the tender amount equal to the total amount after tax.
+1. Click Save to save the activity.
+![Tax rates screen](/Images/savetaxscreen2.png) 
+1. Select to Print. The Activity Printout contains the Tax information per Tax rate including the Taxable amount.
+
+If the system is configured to Allow Tax entry corrections, the user can go back to the Tax Rates screen and is allowed to edit the calculated amounts. If a threshold is defined, the user cannot exceed the threshold, if the threshold percent/amount value is exceeded, an error is prompted.
