@@ -93,3 +93,29 @@ The **Exceptions** tab enables you to modify specific tender attributes in speci
 **Safe Transfer Restriction**|To apply a restriction on a tender when transferring money from one safe to another.<BR>The options are:<BR><BR>**Included Locations** - The store/location in which the exception is applied.<BR>**Excluded Locations** - The store/location in which the exception is not applied.<BR>**Touch Point Group** - The touch point group to which the exception is applied.<BR>**Include/Exclude** - The exception is applied or not applied to the selected touch point group.<BR>Yes - The exception applies to the selected touch point group.<BR>No - The exception does not apply to the selected touch point group.<BR>**Message** - The message displayed at the POS when the exception is triggered.|
 |**Signature Required**|**Business Unit** - The store/location in which the exception is applied.<BR>**Touch Point Group** - The touch point group to which the exception is applied.<BR>**Signature Required** - Specifies the method used to verify the customer's signature when required in EFT card transactions.<BR>**Verification** – Cashier must verify the signature.<BR>**Acknowledgement Only** - Cashier only required to acknowledge the signature.|
 |**Tip Restriction**|To apply a restriction on a tender when paying for tips. For example, prevent customers leaving a tip on a voucher.<BR>The options are:<BR>**Included Locations** - The store/location in which the exception is applied.<BR>**Excluded Locations** - The store/location in which the exception is not applied.<BR>**Touch Point Group** - The touch point group to which the exception is applied.<BR>**Include/Exclude** - The exception is applied or not applied to the selected touch point group.<BR>Yes - The exception applies to the selected touch point group.<BR>No - The exception does not apply to the selected touch point group.<BR>**Message** - The message displayed at the POS when the exception is triggered.|
+|**Additional Info**|To prompt the cashier to enter additional information when paying with a specific tender at the POS. The information can be different per tender and include several input fields.<br>For example, on selecting a specific tender that is offline, the POS can prompt the cashier to enter an approval code, transaction reference number, first 6 digits of an order number, a food delivery service Id, etc. The prompts use the Emerald Global dynamic form functionality.<br>The options are:<br>* **Form** – The form displayed at the POS when the restriction is triggered.<br>Forms are configured in the DynamicFormsConfiguration RTI. In each form, you can define the input data and specify if the input data is mandatory or not.<br>The DynamicFormsConfiguration RTI includes the following options:<br>* Min/Max Data Length - to define the minimum/maximum number of characters for data entered in the dynamic form fields.<BR>* FieldDataType – to define the Data input type for each data input field in the dynamic form, e.g., numeric, decimal, etc.<br>* Printable - to indicate if the data field is printed on the receipt.<br>If the user inserts the wrong data, i.e., not according to the min/max or data type definition, a message is prompted at the POS.<BR>**RTI Example**<br>The following RTI shows an example of the DynamicFormsConfigurationMaintenanceRequest:<br>|
+```json
+<?xml version="1.0" encoding="utf-8"?>
+<DynamicFormsConfigurationMaintenanceRequest xmlns="http://retalix.com/R10/services">
+  <Header>
+    <MessageId>1</MessageId>
+  </Header>
+  <DynamicFormsConfiguration>
+    <Form Action="AddOrUpdate">
+      <BusinessUnitId>1</BusinessUnitId>
+      <RetailSegmentId>1</RetailSegmentId>
+      <Culture>en-US</Culture>
+      <DynamicForm Key="Table Number" Description="Table number">
+        <Fields>
+          <DynamicFieldConfiguration Key="Table Number" Caption="Table Number:" IsMandatory="false">
+            <MinDataLength>2</MinDataLength>
+            <MaxDataLength>10</MaxDataLength>
+            <FieldDataType>Numeric</FieldDataType>
+            <Printable>true</Printable>
+          </DynamicFieldConfiguration>
+        </Fields>
+      </DynamicForm>
+    </Form>
+  </DynamicFormsConfiguration>
+</DynamicFormsConfigurationMaintenanceRequest>
+```
