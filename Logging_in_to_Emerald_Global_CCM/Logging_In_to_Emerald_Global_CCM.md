@@ -1,8 +1,6 @@
 ## Logging in to Emerald Global CCM
 
-Access the Emerald Global CCM and in the Log in screen, enter the user name and password and click LOG IN.
-
-**Reference Path:** *Organization/Business Day/Business Day Scheduler*
+Access the Emerald Global CCM and in the Log in screen enter the username and password, and click Sign In.
 
  ![Logging In Screen](/Images/LoggingInScreen.png)
 

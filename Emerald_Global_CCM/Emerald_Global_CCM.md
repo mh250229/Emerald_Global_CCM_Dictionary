@@ -14,6 +14,6 @@ This document is a dictionary for the Emerald Global CCM. It describes each modu
 
 A How To document describing all configuration processes end to end will be provided in a future release.
 
-**Disclaimer:**
+**Important:**
 
 The document content and screenshots are subject to change since the product and UI are still in development and will be undergoing changes.
