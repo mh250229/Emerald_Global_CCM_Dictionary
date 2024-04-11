@@ -31,7 +31,7 @@ View Till Business Period is used to view the approved Till/Cashier settled Busi
 |**Started**|The date from which the Business Period started.|
 |**End by**|The date on which the Business Period ended.|
 |**Business Periods**||
-|Account|The touchpoint account in the Touchpoint Group.  The hyperlink opens the Till Transactions. See also: Till Transaction.|
+|Account|The touchpoint account in the Touchpoint Group.  The hyperlink opens the Till Transactions. See also: [Till Transaction.](<../../Cash_Office/Business_Periods/Till Transactions.md>)|
 |Opening Amount|The money that came in from sales, loans, Paid-in's, etc.|
 |Expected Amount|The money that was taken out of the touchpoint by pickups, paid-out, etc.|
 |Declaration|The actual amount of money counted that currently resides in the till.<br>**Note:** The Description column can be hidden based can be hidden/displayed by configuration via the OfficeBusinessConfigurationMaintenance RTI.|

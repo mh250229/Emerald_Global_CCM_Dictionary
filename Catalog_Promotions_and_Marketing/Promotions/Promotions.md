@@ -8,7 +8,7 @@ For example, a basic promotion can include one criterion and one reward, for exa
 
 All this functionality is made available by the Promotion Engine with its extensive capabilities in order to create promotions fully compliant with customization.
 
-The Promotion engine enables the integral capabilities of the Promotion Manager to support the full cycle from promotion setup at the central office, store level, online distribution of promotions to all or selected stores, and executing the promotions at the time of checkout. The promotion manager also supports importing different promotions from 3rd party systems.
+The Promotion engine enables the integral capabilities of the Promotion Manager to support the full cycle from promotion setup at the central office, store level, online distribution of promotions to all or selected stores, and executing the promotions at the time of checkout. The promotion manager also supports importing different promotions from third-party systems.
 
 Part of the roadmap is to define a unique functionality where templates can be built for the different promotion types, which save setup and maintenance time. This functionality will be elaborated on in future versions.
 
