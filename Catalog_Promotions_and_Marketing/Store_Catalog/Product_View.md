@@ -1,6 +1,6 @@
 ## Product View
 
-**Product View** is used to search for items, and view item details, such as the price, additional codes, etc. You can search for item in a specific store or item hierarchy.
+**Product View** is used to search for items, and view item details, such as the price, additional codes, etc. You can search for an item in a specific store or item hierarchy.
 
 **Reference Path:** *Catalog, Promotions & Marketing/Store Catalog/ Product View*
 

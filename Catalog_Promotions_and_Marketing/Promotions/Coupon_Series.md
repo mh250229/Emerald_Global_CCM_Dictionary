@@ -27,7 +27,7 @@ The following Business Coupon types are supported:
 
 An issuing coupon is the coupon reward issued during a promotion.
 
-For example, Buy 3 Pizzas, Get a $5.00 off Coupon for your next Pizza purchase. If the customer purchases 3 pizzas, the promotion is triggered.
+For example, Buy 3 Pizzas, Get a $5.00 off Coupon for your next Pizza purchase. If the customer purchases 3 pizzas, the promotion is triggered.  
 There are two issuing coupon types:
 
 * **Coupon Instance** - coupon instances are linked to promotions in order to issue a coupon reward. On creating the promotion, the coupon reward is linked to the Coupon Instance. A Coupon Instance is a specific coupon within a Coupon Series, and the Coupon Series is always linked to a matching Data Pattern. When the promotion is triggered, the system identifies the coupon instance linked to the promotion. The system prints the coupon with a barcode, which is printed according to the defined Data Pattern structure linked to the Coupon Series, containing the Coupon Instance. The barcode includes a reward value. When the coupon is redeemed, the system validates the barcode that was issued before triggering the reward. See Coupon Redemptions.
@@ -132,10 +132,10 @@ You can also block an instance within the coupon series.
 |**Override**|Indicates if the coupon reward for the defined coupon instance can be overridden. If Yes, the cashier can select the coupon line in the transaction and override the value.|
 |**Attributes section**||
 |Printing Template|The template linked to the coupon instance. This field is integrated with the Message module, and the user can access the Message module to create a new message. If no special template is selected, the Printing Template linked to the coupon series in the Attributes tab is used.|
-|Tender Type|The tender that is logged when the defined coupon is redeemed.<br>Note: Coupons that trigger promotions configured as Reward As Tender have their tender defined from the promotion and not the coupon settings. If the Promotion is not found the system retrieves the Tender from the Coupon Settings.|
+|Tender Type|The tender that is logged when the defined coupon is redeemed.<br>**Note:** Coupons that trigger promotions configured as Reward As Tender have their tender defined from the promotion and not the coupon settings. If the Promotion is not found the system retrieves the Tender from the Coupon Settings.|
 |Member Card Required|A loyalty card must be scanned or entered during the transaction to accept a scanned coupon (a message is prompted if it has not).<br>This option is only enabled if the checkbox is selected.|
 |Blocked|The coupon instance within the coupon series is not valid. When a blocked coupon is scanned at the POS, a message is prompted that the coupon is no longer valid.<br>This option is only enabled if the checkbox is selected.|
-|Virtual Coupon|The coupon instance within the coupon series is a virtual coupon. Electronic or virtual coupons are added to loyalty member accounts via a website. The coupons are automatically redeemed during a sales transaction in which the customer meets the condition required to trigger the coupon.<br> Note: If the Coupon Series is virtual, then the coupon instance is also a virtual coupon even if this field is set to No.<br>This option is only enabled if the checkbox is selected.|
+|Virtual Coupon|The coupon instance within the coupon series is a virtual coupon. Electronic or virtual coupons are added to loyalty member accounts via a website. The coupons are automatically redeemed during a sales transaction in which the customer meets the condition required to trigger the coupon.<br> **Note:** If the Coupon Series is virtual, then the coupon instance is also a virtual coupon even if this field is set to No.<br>This option is only enabled if the checkbox is selected.|
 |**Linked Promotions section**|Defines the promotions linked to the coupon instance. Each promotion can be opened in a separate office tab, viewed and edited.|
 |Description|The name of the promotion linked to the coupon instance.|
 |Linkage type|Redemption promotion or Issuing promotion.|

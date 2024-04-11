@@ -6,6 +6,7 @@
 
 ![Local Price History Screen](/Images/LocalPriceHistoryScreen.png)
 
+View the fields as follows:
 |**Field**|**Description**|
 |---------|----------|
 |Store|The store in which you are searching for price changes.|
