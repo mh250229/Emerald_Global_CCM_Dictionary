@@ -1,6 +1,6 @@
 ## Devices
 
-Devices are the peripherals linked to the clients, e.g., EFT providers, Printers, Scanners, MSR devices, etc.
+**Devices** are the peripherals linked to the clients, e.g., EFT providers, Printers, Scanners, MSR devices, etc.
 
 Each device must be defined with its specific attributes and then linked to the clients.
 

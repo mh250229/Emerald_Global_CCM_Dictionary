@@ -118,7 +118,7 @@ The actions that can be selected and applied to a Role. The actions define the a
 |Price Approval|Approve Price changes|To enable users to approve price changes.|
 |Product|Configure General|To enable users to add the product details, such as the item description and sellable codes to the store catalog.|
 ||Configure Price|To enable users to define the price of products in the store catalog.|
-|Configure Restriction|To enable users to apply selling restrictions to a product in the store catalog.|
+||Configure Restriction|To enable users to apply selling restrictions to a product in the store catalog.|
 ||Configure Store Range|To enable users to configure the stores in which products can be sold.|
 |Promotion|Configure|To enable users to set up promotions.|
 |Receipt Messaging|Customer Message|To enables users to add, edit or delete or view the ‘Receipt Custom Messaging’ screen.|
