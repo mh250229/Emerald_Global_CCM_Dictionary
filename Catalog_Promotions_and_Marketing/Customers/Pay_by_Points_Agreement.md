@@ -1,6 +1,6 @@
 ## Pay by Points Agreement
 
-Pay By Points Agreement creates agreements enabling customers to pay for items purchased with points earned in previous transactions. For example, specify that customers can redeem every 10 points earned for $1.00, which they can use to pay for future purchases.
+**Pay By Points Agreement** creates agreements enabling customers to pay for items purchased with points earned in previous transactions. For example, specify that customers can redeem every 10 points earned for $1.00, which they can use to pay for future purchases.
 
 Conversion rates can be defined for all the currencies accepted in the stores. For example, you can specify that when paying with $US, customers earn 10 points for every $1.00 spent, and when paying with £UK, customers earn 15 points for every £1.00 spent.
 

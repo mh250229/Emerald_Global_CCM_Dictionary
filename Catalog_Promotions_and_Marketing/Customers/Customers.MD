@@ -40,7 +40,7 @@ When only one customer is retrieved, the customer's details are not masked, howe
 
 |**Field**|**Description**|
 |---------|----------|
-|**First Name**|The customer's first name.<BR>**Note:** When searching by First Name, Last Name, or Email, capital letters and spaces at the beginning or end are ignored.<BR>For example, the customer service representative wants to search for a customer whose first name is David.<BR>The search results include all customers with the names David, david, (with space at the beginning) etc.|
+|**First Name**|The customer's first name.<BR>**Note:** When searching by First Name, Last Name, or Email, capital letters and spaces at the beginning or end are ignored.<BR><br>For example, the customer service representative wants to search for a customer whose first name is David.<BR>The search results include all customers with the names David, david, (with space at the beginning) etc.|
 |**Last Name**|The customer's surname.|
 |**Card Number**|The customer's registered card number.|
 |**Email**|The customer's email address.|
@@ -117,7 +117,7 @@ Loyalty customers can also share loyalty benefits such as account points and dig
 |**Loyalty member**|Indicates that the customer has subscribed to a loyalty program.|
 |**Customer tier**|The tier rating assigned to the customer. The tier system is used to classify customers, and help retailers learn which customers deserve the most time and attention enabling retailers to create promotions and campaigns to target a specific group of customers.<BR>Customers are classified according to the amount they spend in the store. Each purchase rewards the customer with points which are accumulated and used to assign the customer to the relevant tier.<BR><BR>For example:<BR><BR>Basic Tier - 0-1000 points <BR>Silver Tier - 1001-5000 points<BR>Gold Tier - 5001-10000 points <BR>Platinum Tier - 10001 points and up<BR>You can give a 10% discount to members linked to the Basic tier, 15% to members linked to the Silver tier and so on.|
 |**Segments**|The segments that are linked to a customer.|
-|egment ID|The ID of the segment linked to the customer.|
+|Segment ID|The ID of the segment linked to the customer.|
 |Segment Name|The name of the segment linked to the customer.|
 |**Accounts**|The customer's accounts and account balances.|
 |Redemption allowed|Indicates that the customer can redeem points from their accounts. If a Loyalty customer has more than one account and is permitted to redeem points, then points can be redeemed from all the accounts. However, if the customer is not permitted to redeem points, all the accounts are blocked.<BR>You can use this option as an incentive. For example, to encourage customers to provide more personal details to allow for more specific targeting, you can prevent customers who did not enter their full personal details from redeeming points.<BR>Household members can have different redemption privileges to the customer.
@@ -160,7 +160,7 @@ The **Promotions tab** displays the promotions and coupons the customer and/or a
 
 ### Visits Tab
 
-The Visits tab displays the number of times a customer or a member of the same household visited the stores. You can view a list of the customer's transactions as well as the store the customer prefers to shop in, the total amount spent by the customer and the customer's card number
+The **Visits** tab displays the number of times a customer or a member of the same household visited the stores. You can view a list of the customer's transactions as well as the store the customer prefers to shop in, the total amount spent by the customer and the customer's card number
 
 **Reference Path:** *Catalog, Promotions & Marketing/Customers/Customers/Add New*
 
@@ -168,7 +168,7 @@ The Visits tab displays the number of times a customer or a member of the same h
 
 |**Field**|**Description**|
 |---------|----------|
-|**Training mode tickets**|Indicates that the Show Results displays only tickets performed in Training mode when viewing Customer Visits information.|
+|Training mode tickets|Indicates that the Show Results displays only tickets performed in Training mode when viewing Customer Visits information.|
 |**Visits**|Displays a list of the customer's transactions made when the customer visited the store and purchased items.|
 |Purchase Date|The date and time of the purchase.|
 |Store Name|The store in which the customer purchased the items.|
@@ -185,7 +185,7 @@ The Visits tab displays the number of times a customer or a member of the same h
 
 ### Self-Scan Tab
 
-The Self Scan tab displays customer rescan information. You can view the details of customers’ self scan transactions as well as the number of transactions rescanned.
+The **Self Scan tab** displays customer rescan information. You can view the details of customers’ self scan transactions as well as the number of transactions rescanned.
 
 Customers have the option to take a Self-Scan device, and scan each item before placing it in the shopping cart. The Self Scan comes with security features to protect the retailer. This includes a mechanism to automatically trigger a rescan of the items, or manually trigger a forced rescan of the items. This option enables the retailer to double-check that customers scanned all the items in their shopping cart.
 

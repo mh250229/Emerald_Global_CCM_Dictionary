@@ -1,6 +1,6 @@
 ## Authentication Service
 
-**Authentication Service** enables you to send an email to customers who have forgotten their password to access one of the touchpoints.
+**Authentication Service** enables you to send an email to customers who have forgotten their password to access one of the touchpoints.  
 On selecting the Forgot Password link on a touchpoint, an email containing the customer's password is sent to the customer.
 
 **Reference Path:** *Catalog, Promotions & Marketing/Customers/Authentication Service*
