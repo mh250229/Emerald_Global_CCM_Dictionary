@@ -4,7 +4,7 @@
 
 Users can select the screen on which you want the image displayed, indicate the position of the image for each screen, as well as specify the touchpoints, touchpoints groups and business units in which the image is displayed. If an image is not associated to a Touchpoint Group, it is applied to all Touchpoint groups. If an image is assigned to both a primary and secondary touchpoint group, the secondary touchpoint group is taken in to account. Images can be added, changed or deleted. There are default local images in case no image was uploaded for a certain view.
 
-Images can be added, changed or deleted. Any supported image format, e.g., jpg, jpeg, bmp, png, gif, can be added. The supported file size is 3mb by default but can be changed by configuration
+Images can be added, changed or deleted. Any supported image format, e.g., jpg, jpeg, bmp, png, gif, can be added. The supported file size is 3mb by default but can be changed by configuration.
 
 The configured image list is located in a js file, which is saved by the POS on the local disk in the same location as the PosClient/GraphicsCustomerDisplayBanners files (Default images). The HTML includes a link to the external file and a script to set and manage the images based on the image format, i.e., Jpg, png, etc. The HTML file reads the image file names from the js file and display the files accordingly.
 

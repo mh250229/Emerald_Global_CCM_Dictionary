@@ -1,6 +1,6 @@
 ## PLU Menu Assignments
 
-PLU Menu Assignment links PLU Menus to touchpoints and touchpoints groups in the stores. PLU Menus consist of PLU Groups and define the order the PLU Groups are displayed on a touchpoint.
+**PLU Menu Assignment** links PLU Menus to touchpoints and touchpoints groups in the stores. PLU Menus consist of PLU Groups and define the order the PLU Groups are displayed on a touchpoint.
 
 Once a PLU Menu is set up, you can link the menu to the stores, touchpoint groups and touchpoints on which you want to display the PLU Menu. A PLU Menu can be assigned to different stores and touchpoints, however, can only be assigned once to the same combination of Business Units, Touchpoint types and Touchpoint groups.
 
@@ -8,7 +8,7 @@ PLU Menus can also be inherited. If a PLU Menu was not assigned to a specific Bu
 
 For example, if a PLU Menu is defined for a region it will be applied to all the relevant POS touchpoints linked to the region that have not been assigned a PLU Menu, without actually assigning the PLU Menu to the touchpoint.
 
-**Reference Path:** **Presentation/Menu/PLU Menu Assignments**
+**Reference Path:** *Presentation/Menu/PLU Menu Assignments*
 
 ![PLU Menu Assignments Screen](/Images/PLUMenuAssignmentsScreen.png)
 

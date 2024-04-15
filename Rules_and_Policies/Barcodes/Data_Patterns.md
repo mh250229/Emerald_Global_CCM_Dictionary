@@ -8,13 +8,13 @@ Data Pattern functionality is provided by a layer within the Emerald Global serv
 
 Emerald Global supports recognizing data patterns either by the prefix length or by a regular expression (Regex):
 
-* Prefix Length - Identify a data pattern by the prefix length. You can define a fixed prefix or a prefix length range. After the Prefix length is defined, you specify if the data pattern is decoded, encoded, or both:
+* **Prefix Length** - Identify a data pattern by the prefix length. You can define a fixed prefix or a prefix length range. After the Prefix length is defined, you specify if the data pattern is decoded, encoded, or both:
 
-    * Encoding - defines data patterns in which the system encodes information into the data pattern, for example, a self-weight barcode printed at the customer scale. The system encodes the item’s weight when placed on the scale into the barcode. The encoding process is responsible for generating the specific barcode following a request from a specific service.
+    * **Encoding** - defines data patterns in which the system encodes information into the data pattern, for example, a self-weight barcode printed at the customer scale. The system encodes the item’s weight when placed on the scale into the barcode. The encoding process is responsible for generating the specific barcode following a request from a specific service.
 
-    * Decoding - defines data patterns from which information is extracted. For example, item price embedded data patterns. When an item barcode is scanned, the data such as the price, description, etc., can be identified. The decoding process is responsible for identifying the relevant business entity and forward all extracted properties to it.
+    * **Decoding** - defines data patterns from which information is extracted. For example, item price embedded data patterns. When an item barcode is scanned, the data such as the price, description, etc., can be identified. The decoding process is responsible for identifying the relevant business entity and forward all extracted properties to it.
 
-* Regex - Regular Expressions (Regex) is a sequence of characters that form a search pattern. Data patterns based on Regex are recognized by a wider set of rules based on Regex standards and are used for more complex scenarios.
+* **Regex** - Regular Expressions (Regex) is a sequence of characters that form a search pattern. Data patterns based on Regex are recognized by a wider set of rules based on Regex standards and are used for more complex scenarios.
 
 A data pattern includes a predefined number of digits. Each set of digits is a field that includes data with specific information. There may be more than one data pattern with the same data pattern length and the same data pattern type.
 

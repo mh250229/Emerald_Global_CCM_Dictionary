@@ -14,7 +14,7 @@ A unique tax engine calculates taxes during the transaction based on predefined 
 
 |**Field**|**Description**|
 |---------|----------|
-|**Rate Id**|The tax rate ID.|
+|**Rate ID**|The tax rate ID.|
 |**Authority**|The tax authority which determined the tax rate.|
 |**Product group**|The product group the tax is applied to. Similar items which are taxed identically are grouped in a product group and the tax is applied to the group.
 |**Date range**|The date range during which the tax rate is applied.|
@@ -38,7 +38,7 @@ A unique tax engine calculates taxes during the transaction based on predefined 
 
 |**Field**|**Description**|
 |---------|----------|
-|**Rate Id**|ID number of the tax.|
+|**Rate ID**|ID number of the tax.|
 |**Authority**|The tax authority which set the tax rate.|
 |**Product group**|The product group the tax is applied to. Similar items which are taxed identically are grouped in a product group and the tax is applied to the group.|
 |**Date range**|The date range during which the tax rate is applied.|

@@ -12,5 +12,5 @@ Multiple tax rates are applied based on the Tax Authorities such as: state, coun
 
 |**Field**|**Description**|
 |---------|----------|
-|**Id**|The unique Tax Authority ID number.|
+|**ID**|The unique Tax Authority ID number.|
 |**Description**|The Tax Authority name.|

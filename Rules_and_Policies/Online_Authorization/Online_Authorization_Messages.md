@@ -1,6 +1,6 @@
 ## Online Authorization Messages
 
-Online Authorization Messages displays the error messages displayed on a POS that are returned from the external providers upon receiving errors during communication with third-party providers via the GSE.
+**Online Authorization Messages** displays the error messages displayed on a POS that are returned from the external providers upon receiving errors during communication with third-party providers via the GSE.
 
 **Reference Path:** *Rules & Policies/Online Authorization/Online Authorization Messages*
 
