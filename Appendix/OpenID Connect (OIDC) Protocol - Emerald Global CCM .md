@@ -90,10 +90,10 @@ Create a new Logout API "/logout“ that is responsible for the update of the EX
 
 This section describes how to register the CCM Application in Azure.
 
-1. Create an account in azure using the following link.
+1. Create an account in azure using the following link.  
 https://azure.microsoft.com/en-us/get-started/azure-portal
 
-1. Create a trial account by giving payment details.
+1. Create a trial account by giving payment details.  
 Once you are successfully logged in, the Home page is displayed as follows:  
 ![Azure home page screen](/Images/azurehomepagescreen.png)
 
@@ -278,6 +278,4 @@ OIDCConfigurationLookupRequest RTI example:
 </OIDCConfigurationLookupRequest>
 ```
 
-**Note:**
-
-On logging in to Spooky, the POS continues with the internal users using the user name and password, even if the system is configured to OIDC.
+**Note:** On logging in to Spooky, the POS continues with the internal users using the user name and password, even if the system is configured to OIDC.
