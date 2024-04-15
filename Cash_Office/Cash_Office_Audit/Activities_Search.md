@@ -36,7 +36,7 @@
 |**General**||
 |Store|The name of the store in which the cash office activity was performed.|
 |Activity Name|The name of the cash office activity.|\
-|Id|The ID of the cash office transaction.|
+|ID|The ID of the cash office transaction.|
 |From Account|The account from which money was transferred.|
 |To Account|The account to which money was transferred.|
 |Business Date|The business date the transaction was performed on.|
