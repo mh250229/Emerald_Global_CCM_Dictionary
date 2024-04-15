@@ -52,7 +52,7 @@
 |Adjusted|Indicates if the tender amount recorded was adjusted. For example, in order to balance the business period or if the wrong amount was keyed in.<BR>**Note:** Only the amounts for Tender Loan, Tender Pickup, Paid In, and Paid Out activities can be adjusted.|
 |Reason|The reason the cash office activity was adjusted.|
 |**Denominations**||
-|Type|The list of banknotes and coins issued for the selected currency.|
+|Type|**Note**: The list of banknotes and coins issued for the selected currency.|
 |Denomination|The value of each banknote and coin.|
 |Units|The number of each denomination type recorded in the Cash Office Activity.|
 |Total amount|The total amount of each denomination type recorded in the Cash Office Activity.|
