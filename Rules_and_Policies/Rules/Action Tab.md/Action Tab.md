@@ -22,7 +22,7 @@ The following Action types are supported:
 
 ##### Member Validation
 
-The Member Validation action is used to validate Loyalty members who request to pay or partially pay for their transaction with ‘Points’.
+The Member Validation action is used to validate Loyalty members who request to pay or partially pay for their transaction with ‘Points’.  
 The Member Validation action type is used for the payment BRM.
 
 ![Member Validation](/Images/MemberValidation.png)
@@ -66,7 +66,7 @@ The **Approval Required** Action Type requires the manager to approve the transa
 
 ##### Select Reason
 
-The **Select Reason** Action Type requires the user to select a reason the activity was performed, before continuing with the transaction.
+The **Select Reason** Action Type requires the user to select a reason the activity was performed, before continuing with the transaction.  
 For example, the cashier may be required to enter a reason when performing Price Overrides, Tax Exemptions, Open Drawer, and so on, at the POS.
 
 ![Select Reason Screen](/Images/SelectReasonScreen.png)

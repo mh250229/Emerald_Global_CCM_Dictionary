@@ -16,7 +16,7 @@ In addition, within the policy, the option to specify the maximum number of own 
 |**Touchpoint Type**|The touchpoint group the Own Bag policy is applied to.|
 |**Method of Work**|The method by which the Own Bag policy is implemented on the touchpoint. The options are:<BR>**Along the whole sale process** - The own bag functionality can be invoked at any time during the transaction, whether on a self-checkout or by the cashier on a POS touchpoint.<BR>**As a pop up when moving to Tender mode** - On moving to Tender mode, the system automatically prompts to enter the number of own bags used, or to indicate no own bags.|
 |**Intervention from**|	The maximum number of re-usable bags beyond which an intervention is triggered. This value is defined in the **Intervention appears when exceeding x bags** field in the Own Bag Policy form.|
-|*Enabled**|Indicates that the Own Bag functionality is enabled.|
+|**Enabled**|Indicates that the Own Bag functionality is enabled.|
 
 **Reference Path:** *Rules & Policies/Rules/Own Bag Policies/Add New*
 

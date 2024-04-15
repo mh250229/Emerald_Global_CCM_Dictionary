@@ -46,7 +46,7 @@ The Business Rule module includes:
 * **Location Conditions** – trigger messages in a specific store.
 * **Touchpoint Group Conditions** – trigger messages targeted at specific touchpoint groups.
 * **Product Conditions** – trigger messages when selling a product with specific characteristics, e.g., prompt the cashier with information when a certain number of a particular group of products is sold, or trigger a message if the cashier scans an item with a past expiry date.
-* **Payment Conditions – trigger messages when accepting tenders of a specific type, e.g., if you wish to prevent a customer paying a cash amount of more than $1000.00, and the cashier tenders more than the specified amount, a message can be prompted when that limit is exceeded.
+* **Payment Conditions** – trigger messages when accepting tenders of a specific type, e.g., if you wish to prevent a customer paying a cash amount of more than $1000.00, and the cashier tenders more than the specified amount, a message can be prompted when that limit is exceeded.
 * **Tender Conditions** - trigger messages when a cash office activity is adjusted, e.g., If you want to prohibit adjusting the cash tender in declarations.
 * **Customer Order Conditions** – trigger messages during transactions which have not yet been completed.
 * **Reason Conditions** – trigger a message when a specific reason code is selected at a touchpoint, e.g., prompt the cashier to request manager approval when the cashier overrides an item price and selects damaged as the reason code.

@@ -43,7 +43,7 @@ Online Purchase Groups represent a profile of online items as follows:
 |**Group Members**||
 |Item Code|The code of the item linked to the Online Purchase Group.|
 |Description|A description of the item linked to the Online Purchase Group.<BR>This field is automatically populated when the Item Code is entered.|
-|External Id|The external ID used by the provider to identify the item.<BR>This field is automatically populated when the Item Code is entered.|
+|External ID|The external ID used by the provider to identify the item.<BR>This field is automatically populated when the Item Code is entered.|
 |**Printing Definitions**||
 |Online Authorization|Indicates that the online authorization is printed on a separate slip. If not selected, the online authorization is printed on the main receipt.|
 |Offline Authorization|Indicates that the offline authorization is printed on a separate slip. If not selected, the offline authorization is printed on the main receipt.|
