@@ -10,23 +10,23 @@ After defining the search criteria, the results are displayed in a grid enabling
 
 |**Field**|**Description**|
 |---------|----------|
-|**Transaction Types**|The transaction type searched in the Electronic Journal.<BR>The options are:<BR><BR>**Retail** – Sales transactions<BR>**Control** – Transaction such as Cashier sign on, Invalid sign on.|
+|**Transaction Types**|The transaction type searched in the Electronic Journal.<BR>The options are:<BR><BR>* **Retail** – Sales transactions<BR>* **Control** – Transaction such as Cashier sign on, Invalid sign on.|
 |**Store**|The store for which the report is generated.|
 |**Start Date/Time**|The date and time from which the transaction was performed.|
 |**End Date/Time**|The date and time up to which the transaction was performed.|
 |**Transaction Number**|The transaction number. The full or partial transaction number can be used to search for transactions.|
 |**Total Amount**|The total transaction amount. The options are:<BR><BR><=<BR>=<BR>>=<BR>The total amount is entered in the Enter Total Amount field.|
-|**Transaction Display**|Specifies which transactions that meet the search criteria are retrieved. The options are:<BR><BR>**Show All Transactions** – indicates that all transactions that meet the search criteria are retrieved.<BR>**Show All Transactions, excluding Voided Transactions** - indicates that all transactions that meet the search criteria are retrieved excluding voided transactions.<BR>**Show Only Voided Transactions** - indicates that only voided transactions that meet the search criteria are retrieved.|
+|**Transaction Display**|Specifies which transactions that meet the search criteria are retrieved. The options are:<BR><BR>* **Show All Transactions** – indicates that all transactions that meet the search criteria are retrieved.<BR>* **Show All Transactions, excluding Voided Transactions** - indicates that all transactions that meet the search criteria are retrieved excluding voided transactions.<BR>* **Show Only Voided Transactions** - indicates that only voided transactions that meet the search criteria are retrieved.|
 |**Show Only Training Mode Transactions**|Indicates that only transactions that were performed in Training Mode are retrieved. This enables supervisors to view the transactions performed by trainee employees, e.g., trainee cashiers, to monitor their progress and provide feedback. When viewing a Training Mode transaction, a Training Mode indication is displayed on the ticket.|
 |**Show Only Employee’s Transactions**|Indicates that only transactions performed for employees are retrieved. This is applicable to Retail Transaction Types only.|
-|**Customer Id**|The customer's Loyalty (Member) ID number.|
+|**Customer ID**|The customer's Loyalty (Member) ID number.|
 |**Touchpoint ID**|The ID of the touchpoint on which the transaction was performed.|
 |**Items**|The item code of the item in the transaction. The full or partial item code can be used to retrieve transactions containing the item.|
 |**Touchpoint Type**|The touchpoint type. The options are:<BR><BR>Customer Order Management<BR>Customer Scale<BR>DMS Agent<BR>Forecourt<BR>FuelPOS<BR>KeyboardPOS<BR>MobilePOS<BR>Mobile Shopper<BR>Online Shopping<BR>Portal<BR>POS<BR>Pump<BR>QSRPOS<BR>SelfCheckout<BR>SelfScanDevice<BR>SelfScanEU<BR>Unknown|
 |**Origin Touchpoint ID**|The ID number of the touchpoint on which the transaction was originally generated.|
-|**Rescan Status**|The rescan status of specific transactions on which a rescan was performed.  The options are<BR><BR>**Success** - indicates transactions in which the rescan was successful<BR>**Failure** - indicates transactions in which the rescan was not successful<BR>**All** – indicates all transactions in which a rescan was performed|
+|**Rescan Status**|The rescan status of specific transactions on which a rescan was performed.  The options are:<BR><BR>* **Success** - indicates transactions in which the rescan was successful<BR>* **Failure** - indicates transactions in which the rescan was not successful<BR>* **All** – indicates all transactions in which a rescan was performed|
 |**Operator ID**|The ID of the user who performed the transaction.|
-|**Tenders With Amounts**|The tender and the amount paid with the tender. The options are:<BR><BR>**Tender ID** - the Tender ID according to which you want to search for transactions.<BR>**Tender Amount** - the Amount paid with the selected tender.|
+|**Tenders With Amounts**|The tender and the amount paid with the tender. The options are:<BR><BR>* **Tender ID** - the Tender ID according to which you want to search for transactions.<BR>* **Tender Amount** - the Amount paid with the selected tender.|
 
 #### Electronic Journal Transaction List
 
@@ -113,11 +113,11 @@ The following screen displays Control transactions.
 |Amount|The amount tendered in the transaction with the tender.|
 |Original Amount|The amount originally paid in the transaction.|
 |Exchange Rate|The exchange rate used when a foreign currency is used to pay for the transaction.|
-|Abandoned Void|Indicates if the item was included in an abandoned transaction that was automatically voided by the system.<BR>The options are:<BR><BR>**Yes** - indicates the transaction was automatically voided.<BR>**No** - indicates the transaction was not voided.|
+|Abandoned Void|Indicates if the item was included in an abandoned transaction that was automatically voided by the system.<BR>The options are:<BR><BR>* **Yes** - indicates the transaction was automatically voided.<BR>* **No** - indicates the transaction was not voided.|
 |**Taxes**|![Taxes](/Images/taxes.png)|
 |Imposition|The imposition assigned to the tax rate. Impositions are placeholders for sets of tax rules that are shared according to the type of tax and/or jurisdictional grouping. The Imposition name identifies the tax type imposed for the transaction.|
 |Description|A description of the tax applied in the transaction.|
-|Included|Indicates if the applied tax is Inclusive or Exclusive.<BR>The options are:<BR><BR>**No** - the tax value is not included in the item price and is added to the price during the sales transaction<br>**Yes** - the tax value is included in the item price|
+|Included|Indicates if the applied tax is Inclusive or Exclusive.<BR>The options are:<BR><BR>* **No** - the tax value is not included in the item price and is added to the price during the sales transaction<br>* **Yes** - the tax value is included in the item price|
 |Tax Rate|The Tax rate applied in the transaction.|
 |Amount|The actual tax amount added to the transaction.|
 |**Tips**|![Taxes](/Images/tips.png)|
@@ -131,7 +131,7 @@ The following screen displays Control transactions.
 |**Promotions**|![Promotions](/Images/promotions.png)|
 |Promotion ID|The promotion ID number.|
 |Description|The promotion name.|
-|Reward Type|The reward issued in the promotion. The reward options are:<BR><BR>**Monetary** – indicates that a monetary discount was issued, e.g.,  Amount Off, % off, Free Item. New Price, Gift Card<BR>**Member Account** – indicates that points were added to a member account<BR>**Message** – indicates that a target message was displayed, e.g., On Your Next purchase Get 10% Off<BR>**Tender** – indicates that a tender triggered the promotion, e.g., Pay with Cash, Get 5% Off.<BR>**Coupon** – indicates that a coupon was issued|
+|Reward Type|The reward issued in the promotion. The reward options are:<BR><BR>* **Monetary** – indicates that a monetary discount was issued, e.g.,  Amount Off, % off, Free Item. New Price, Gift Card<BR>* **Member Account** – indicates that points were added to a member account<BR>* **Message** – indicates that a target message was displayed, e.g., On Your Next purchase Get 10% Off<BR>* **Tender** – indicates that a tender triggered the promotion, e.g., Pay with Cash, Get 5% Off.<BR>* **Coupon** – indicates that a coupon was issued|
 |Reward Amount|The monetary or points amount rewarded in the promotion.|
-|**Receipt**|**Note:** Only Z-Report control transactions are displayed in the receipt tab.<BR>The image of the transaction receipt.<BR>![Promotions](/Receipt Image/receiptimage.png)|
+|**Receipt**|**Note:** Only Z-Report control transactions are displayed in the receipt tab.<BR>The image of the transaction receipt.<BR>![Promotions](/Images/ReceiptImage.png)|
 |**Signature**|An image of the customer’s signature is displayed. The signature is displayed in the actual signature size.<BR>This is not displayed in Control transactions.|

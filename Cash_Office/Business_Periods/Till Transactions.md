@@ -9,7 +9,7 @@ Till Transactions is used to view all cash office activities performed on a sele
 |**Field**|**Description**|
 |---------|----------|
 |**Open Amount**|The initial balance in the till at the beginning of the business period.|
-|**Total In**|The total amount received in the Till Account for all the Cash Office Activities during the business period.<br>Note: If the Cash tender is configured as Auto Reconcile, the value of the Cash back is added to the auto reconcile account. For example, in an EFT payment which includes a Cash back, the Total In amount is increased by the payment, including the Cash back amount.|
+|**Total In**|The total amount received in the Till Account for all the Cash Office Activities during the business period.<br>**Note**: If the Cash tender is configured as Auto Reconcile, the value of the Cash back is added to the auto reconcile account. For example, in an EFT payment which includes a Cash back, the Total In amount is increased by the payment, including the Cash back amount.|
 |**Total Out**|The total amount withdrawn from the Till Account for all the Cash Office Activities during the business period.<BR>When the Cash Tender auto reconciled and defined as the Cashback tender, the Cashback amount is displayed on a separate line in the Total Out section.|
 |**Expected Amount**|The system generated amount for the selected account.|
 |**Actual Amount**|The actual amount recorded for the selected account.|

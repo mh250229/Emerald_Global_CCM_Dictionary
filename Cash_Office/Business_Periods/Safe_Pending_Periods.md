@@ -12,7 +12,7 @@ Business Periods are approved after the accounts are balanced or the management 
 |---------|----------|
 |Store|The store in which to view a Safe Business period.|
 |**Business Periods**||
-|Add Activity|Click to add a Cash Office Activity to the Business period. When clicked, the Activities screen is displayed, and you can select an activity, enter the relevant details, and add the activity to the Business period.<BR>**Note**: The **Add Activity** and **Declare** links are disabled for users assigned to a role prohibited from performing Cash Office Activities on a past date.<BR>The Roles prohibited from performing Cash Office Activities on a past date are configured via the ProhibitedRolesForPastDatesInCashOfficeActivities parameter in the OfficeBusinessConfigurationMaintenanceRequest RTI.|
+|Add Activity|Click to add a Cash Office Activity to the Business period. When clicked, the Activities screen is displayed, and you can select an activity, enter the relevant details, and add the activity to the Business period.<BR>**Note**: The **Add Activity** and **Declare** links are disabled for users assigned to a role prohibited from performing Cash Office Activities on a past date.<br><BR>The Roles prohibited from performing Cash Office Activities on a past date are configured via the ProhibitedRolesForPastDatesInCashOfficeActivities parameter in the OfficeBusinessConfigurationMaintenanceRequest RTI.|
 |Declare|Click to declare the undeclared accounts in the Business Period. When selected, the Activities/Till Declaration form is displayed. You can declare the account as required.|
 |Approve All|Click to approve all the balanced accounts in the selected Business Period.|
 |Settle|Click to settle the selected Business Period.|
@@ -58,7 +58,7 @@ Business Periods are approved after the accounts are balanced or the management 
 |**Total In**|The total amount received in the Safe Account for all the Cash Office Activities during the business period.|
 |**Total Out**|The total amount withdrawn from the Safe Account for all the Cash Office Activities during the business period.|
 |**Expected Amount**|The system generated amount for the selected account.|
-|**Over / Short**|The options are:<BR><BR>**Over** - The declared Tender is more than the calculated value. Over amounts are displayed in red as a positive number, and Over is displayed next to the amount.<br>**Short** - The declared Tender is less than the calculated value. Short amounts are displayed in red as a negative number, and Short is displayed next to the amount.|
+|**Over / Short**|The options are:<BR><BR>* **Over** - The declared Tender is more than the calculated value. Over amounts are displayed in red as a positive number, and Over is displayed next to the amount.<br>* **Short** - The declared Tender is less than the calculated value. Short amounts are displayed in red as a negative number, and Short is displayed next to the amount.|
 |**Transaction List**|A breakdown of each transaction recorded for the selected activity|
 |Balancing Counters|The cash office activity that generated the transactions.|
 |Activity Count|The total number of the selected activity performed in the business period.|
@@ -90,7 +90,7 @@ Business Periods are approved after the accounts are balanced or the management 
 |Cancel|Click to cancel all the adjustments performed for the Cash Office Activity. Once cancelled, the original values are redisplayed.|
 |Save|Click to save all the adjustments performed for the Cash Office Activity, e.g., such as the Reference, Tax Amount and Tender Amount.|
 |Transaction Date|The date and time the Cash Office Activity was performed.|
-|Id|The ID of the Cash Office Activity.|
+|ID|The ID of the Cash Office Activity.|
 |User|The name of the user who performed the activity.|
 |Reference|The reference to the Cash Office Activity defined when performing the activity, e.g., an invoice number.<BR>The reference text can be adjusted based on the IsReferenceAdjustable parameter configuration in the ActivityReferenceConfigurationMaintenanceRequest RTI.<BR> When the parameter is set to True, the **Reference** field can be adjusted.<BR>**Note**: The **Reference** field cannot be adjusted for Cash Office Activities in settled Business Periods.|
 |Activity Name|The name of the Cash Office Activity.|

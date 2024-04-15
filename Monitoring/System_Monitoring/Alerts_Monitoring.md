@@ -32,7 +32,7 @@ The Alerts Monitoring screen is associated with the business activity. Only user
 |---------|----------|
 |**Business Unit**|The Business Unit where the alert was triggered.|
 |**Touchpoint**|The touch points for which you want to view alerts.|
-|**State**|The alert status: The options are:<BR><BR><BR><BR>**New** – indicates that the Alert was sent but not yet handled.<BR>**In Process** - indicates that the alert is being dealt with but not yet closed.<BR>**Closed** - indicates that the alert was resolved and closed.<BR>**Cancelled** - indicates that the alert was cancelled.|
+|**State**|The alert status: The options are:<BR><BR>**New** – indicates that the Alert was sent but not yet handled.<BR>**In Process** - indicates that the alert is being dealt with but not yet closed.<BR>**Closed** - indicates that the alert was resolved and closed.<BR>**Cancelled** - indicates that the alert was cancelled.|
 |**Group**|The Alert Group to which the alert belongs.|
 |**Severity**|The severity level of the alert.<BR>Alerts are prioritized according to the severity level to minimize the impact on the store operations. The severity level of each alert is assigned when the alert is created. Severity levels range from critical to no immediate impact|
 |**From**|The date and time from which you want to view alerts that were triggered.|

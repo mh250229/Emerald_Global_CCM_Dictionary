@@ -1,6 +1,6 @@
 ### Auto-Skipped Tokens
 
-Auto-Skipped Tokens shows a list of the store servers with tokens that were stuck during download and automatically skipped enabling the download to continue. For example, skip a stuck message that is preventing data from being downloaded to the store and could cause data differences.
+**Auto-Skipped Tokens** shows a list of the store servers with tokens that were stuck during download and automatically skipped enabling the download to continue. For example, skip a stuck message that is preventing data from being downloaded to the store and could cause data differences.
 
 Emerald Global defines a list of the entities for which an automatic skip stuck token is applied. If the system performs an automatic skip, a notification is raised. When the stuck token includes more than one entity, if all the entities are part of the list, automatic skip is applied. If one of the entities is not in the list, automatic skip is not applied.
 

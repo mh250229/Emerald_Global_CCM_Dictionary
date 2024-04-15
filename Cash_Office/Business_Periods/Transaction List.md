@@ -17,7 +17,7 @@
 |**Monetary Adjusted Transactions Only**|Indicates that only Cash office activities in which at least one adjustment was performed are retrieved and displayed in the Cash Office Activities Log grid.|
 |**Activities**||
 |Transaction Date|The date and time the Cash Office Activity was performed.|
-|Id|The ID of the Cash Office Activity.|
+|ID|The ID of the Cash Office Activity.|
 |User|The name of the user who performed the activity.|
 |Reference|The reference to the Cash Office Activity defined when performing the activity, e.g., an invoice number.<BR>The reference text can be adjusted based on the IsReferenceAdjustable parameter configuration in the ActivityReferenceConfigurationMaintenanceRequest RTI.<BR>When the parameter is set to True, the **Reference** field can be adjusted.<BR>**Note**: The **Reference** field cannot be adjusted for Cash Office Activities in settled Business Periods.|
 |Activity Name|The name of the Cash Office Activity.|

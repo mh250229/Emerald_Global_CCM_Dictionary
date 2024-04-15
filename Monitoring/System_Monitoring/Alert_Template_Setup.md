@@ -14,11 +14,11 @@ The Alert Template defines the alert severity level, as well as define the messa
 
 |**Field**|**Description**|
 |---------|----------|
-|**Id**|The Alert template ID number.|
+|**ID**|The Alert template ID number.|
 |**Group**|The Alert Group to which the alert is linked. Each Alert Group contains similar types of alerts.|
 |**Severity**|The severity level of the alert. The severity level prioritizes the alerts.|
 |**Grid**||
-|Id|The alert ID number.|
+|ID|The alert ID number.|
 |Description|The name/description of the alert.|
 |Group|The alert group to which the alert is linked. The options are:<BR><BR>**Business Alerts** - Automatically triggered alerts, for example, when a promotion fails to load on the POS.<BR>**Peripheral Device** - Alerts triggered by a device linked to a touchpoint, e.g., when the printer runs out of paper.<BR>**POS Manual Alerts** - Alerts manually triggered at the POS by the cashier, e.g., Cashier needs a break.|
 |Severity|The severity level. Alerts are prioritized according to the severity level assigned when the alert is created. Severity levels range from critical to no immediate impact.|
@@ -31,6 +31,6 @@ The Alert Template defines the alert severity level, as well as define the messa
 
 |**Field**|**Description**|
 |---------|----------|
-|**Group**|The alert group to which the alert is linked. The options are:<BR><BR>**Business Alerts** - Automatically triggered alerts, for example, when a promotion fails to load on the POS.<BR>**Peripheral Device** - Alerts triggered by a device linked to a touchpoint, e.g., when the printer runs out of paper.<BR>**POS Manual Alerts** - Alerts manually triggered at the POS by the cashier, e.g., Cashier needs a break.|
+|**Group**|The alert group to which the alert is linked. The options are:<BR><BR>* **Business Alerts** - Automatically triggered alerts, for example, when a promotion fails to load on the POS.<BR>* **Peripheral Device** - Alerts triggered by a device linked to a touchpoint, e.g., when the printer runs out of paper.<BR>* **POS Manual Alerts** - Alerts manually triggered at the POS by the cashier, e.g., Cashier needs a break.|
 |**Severity**|The severity level. Alerts are prioritized according to the severity level assigned when the alert is created. Severity levels range from critical to no immediate impact.|
 |**Message**|The message displayed when the alert is triggered.|
